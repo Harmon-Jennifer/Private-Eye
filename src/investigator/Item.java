@@ -12,9 +12,9 @@ import java.util.Objects;
  */
 public class Item implements Serializable{
     
-    String itemName;
-    String itemType;
-    String itemDesc;
+    private String itemName;
+    private String itemType;
+    private String itemDesc;
     
     
     public Item() {

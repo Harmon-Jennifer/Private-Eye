@@ -6,20 +6,56 @@
 package privateeye;
 
 import java.util.Scanner; 
-import investigator.Item;
+import investigator.*;
 public class PrivateEye {
 
    
     public static void main(String[] args) {
         
-        Item widget = new Item();
+        Drone testDrone = new Drone();
         
-        widget.setItemName("Doohicky");
-        widget.setItemType("Tool");
-        widget.setItemDesc("No one know what it does or what it's used for.");
+        testDrone.setDroneName("John Doe");
+        testDrone.setDroneType("Suspect");
+        testDrone.setDroneDesc("An unidentified man want for questioning.");
         
-        String itemInfo = widget.toString();
+        Item testItem = new Item();
+        
+        testItem.setItemName("Doohicky");
+        testItem.setItemType("Tool");
+        testItem.setItemDesc("No one know what it does or what it's used for.");
+        
+        Location testLocation = new Location();
+        
+        testLocation.setLocaleName("Hell's Kitchen");
+        testLocation.setLocaleDesc("A place filled with an odd number of vigilantes and megalomaniacs.");
+        testLocation.setDroneList("People in Hell's Kitchen.");
+        
+        Map testMap = new Map();
+        
+        testMap.setMapName("Dangerous City");
+        testMap.setLocaleList(6);
+        testMap.setNumColumns(10);
+        testMap.setNumRows(8);
+        
+        Player testPlayer = new Player();
+        
+        testPlayer.setName("Shawn Spencer");
+        testPlayer.setAction("look");
+        testPlayer.setItemList("Items available for use");
+        testPlayer.setTurnsLeft(20);
+        
+        
+        String droneInfo = testDrone.toString();
+        String itemInfo = testItem.toString();
+        String locationInfo = testLocation.toString();
+        String mapInfo = testMap.toString();
+        String playerInfo = testPlayer.toString();
+        
+        System.out.println(droneInfo);
         System.out.println(itemInfo);
+        System.out.println(locationInfo);
+        System.out.println(mapInfo);
+        System.out.println(playerInfo);
         
         
         

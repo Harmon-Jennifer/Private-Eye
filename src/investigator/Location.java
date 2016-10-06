@@ -17,7 +17,7 @@ public class Location implements Serializable{
     // class instance variables
     private String localeName;
     private String localeDesc;
-    private String charList;
+    private String droneList;
 
     public Location() {
     }
@@ -38,12 +38,12 @@ public class Location implements Serializable{
         this.localeDesc = localeDesc;
     }
 
-    public String getCharList() {
-        return charList;
+    public String getDroneList() {
+        return droneList;
     }
 
-    public void setCharList(String charList) {
-        this.charList = charList;
+    public void setDroneList(String droneList) {
+        this.droneList = droneList;
     }
 
     @Override
@@ -54,7 +54,7 @@ public class Location implements Serializable{
 
     @Override
     public String toString() {
-        return "Location{" + "localeName=" + localeName + ", localeDesc=" + localeDesc + ", charList=" + charList + '}';
+        return "Location{" + "localeName=" + localeName + ", localeDesc=" + localeDesc + ", droneList=" + droneList + '}';
     }
 
     @Override
@@ -75,7 +75,7 @@ public class Location implements Serializable{
         if (!Objects.equals(this.localeDesc, other.localeDesc)) {
             return false;
         }
-        if (!Objects.equals(this.charList, other.charList)) {
+        if (!Objects.equals(this.droneList, other.droneList)) {
             return false;
         }
         return true;
