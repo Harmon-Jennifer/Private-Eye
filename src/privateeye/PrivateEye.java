@@ -5,8 +5,12 @@
  */
 package privateeye;
 
+import byui.cit260.privateeye.model.Location;
+import byui.cit260.privateeye.model.Map;
+import byui.cit260.privateeye.model.Item;
+import byui.cit260.privateeye.model.Drone;
+import byui.cit260.privateeye.model.Player;
 import java.util.Scanner; 
-import investigator.*;
 public class PrivateEye {
 
    
