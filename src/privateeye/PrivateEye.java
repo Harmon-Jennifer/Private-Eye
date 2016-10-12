@@ -20,13 +20,13 @@ public class PrivateEye {
         
         testDrone.setDroneName("John Doe");
         testDrone.setDroneType("Suspect");
-        testDrone.setDroneDesc("An unidentified man want for questioning.");
+        testDrone.setDroneDesc("An unidentified man wanted for questioning.");
         
         Item testItem = new Item();
         
         testItem.setItemName("Doohicky");
         testItem.setItemType("Tool");
-        testItem.setItemDesc("No one know what it does or what it's used for.");
+        testItem.setItemDesc("No one knows what it does or what it's used for.");
         
         Location testLocation = new Location();
         
