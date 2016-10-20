@@ -13,11 +13,12 @@ public class MathControl {
     
     public double answerBunny(int brownBunny, int blackBunny)
     {
+        //return percentage of black bunnies
         if (blackBunny < 1 || blackBunny > 10)
             return -1;
         if (brownBunny < 1 || brownBunny > 10)
             return -1;
         double answer = blackBunny / (blackBunny + brownBunny - 1.00);   
-        return Math.round(answer*100)/100.0;
+        return Math.round(answer*100)/100.0; //rounds answer to two decimal places
     }
 }
