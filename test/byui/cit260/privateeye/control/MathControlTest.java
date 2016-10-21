@@ -113,4 +113,129 @@ public class MathControlTest {
         //fail("The test case is a prototype.");
     }
     
+    @Test
+    public void testShotDistance () {
+        MathControl instance = new MathControl();
+        
+        System.out.println("Shot test 1");
+        
+        int velocity = 940;
+        int acceleration = 10;
+        double time = 1.5;
+        double expResult = 1421;
+        
+        double result = instance.shotDistance(velocity, acceleration, time);
+        assertEquals(expResult, result, 0.0);
+        
+        System.out.println("Shot test 2");
+        
+        velocity = 940;
+        acceleration = 10;
+        time = 0.4;
+        expResult = -1;
+        
+        result = instance.shotDistance(velocity, acceleration, time);
+        assertEquals(expResult, result, 0.0);
+        
+        System.out.println("Shot test 3");
+        
+        velocity = 940;
+        acceleration = 10;
+        time = 2.3;
+        expResult = -1;
+        
+        result = instance.shotDistance(velocity, acceleration, time);
+        assertEquals(expResult, result, 0.0);
+        
+        System.out.println("Shot test 4");
+        
+        velocity = 940;
+        acceleration = 51;
+        time = 1.5;
+        expResult = -1;
+        
+        result = instance.shotDistance(velocity, acceleration, time);
+        assertEquals(expResult, result, 0.0);
+        
+        System.out.println("Shot test 5");
+        
+        velocity = 940;
+        acceleration = -1;
+        time = 1.5;
+        expResult = -1;
+        
+        result = instance.shotDistance(velocity, acceleration, time);
+        assertEquals(expResult, result, 0.0);
+        
+        System.out.println("Shot test 6");
+        
+        velocity = 200;
+        acceleration = 10;
+        time = 1.5;
+        expResult = -1;
+        
+        result = instance.shotDistance(velocity, acceleration, time);
+        assertEquals(expResult, result, 0.0);
+        
+        System.out.println("Shot test 7");
+        
+        velocity = 940;
+        acceleration = 0;
+        time = 0.5;
+        expResult = 470;
+        
+        result = instance.shotDistance(velocity, acceleration, time);
+        assertEquals(expResult, result, 0.0);
+        
+        System.out.println("Shot test 8");
+        
+        velocity = 940;
+        acceleration = 50;
+        time = 2.2;
+        expResult = 2189;
+        
+        result = instance.shotDistance(velocity, acceleration, time);
+        assertEquals(expResult, result, 0.0);
+        
+        System.out.println("Shot test 9");
+        
+        velocity = 270;
+        acceleration = 0;
+        time = 0.5;
+        expResult = 135;
+        
+        result = instance.shotDistance(velocity, acceleration, time);
+        assertEquals(expResult, result, 0.0);
+        
+        System.out.println("Shot test 10");
+        
+        velocity = 270;
+        acceleration = 50;
+        time = 2.2;
+        expResult = 715;
+        
+        result = instance.shotDistance(velocity, acceleration, time);
+        assertEquals(expResult, result, 0.0);
+        
+        System.out.println("Shot test 11");
+        
+        velocity = 1100;
+        acceleration = 0;
+        time = 0.5;
+        expResult = 550;
+        
+        result = instance.shotDistance(velocity, acceleration, time);
+        assertEquals(expResult, result, 0.0);
+        
+        System.out.println("Shot test 12");
+        
+        velocity = 1100;
+        acceleration = 50;
+        time = 2.2;
+        expResult = 2541;
+        
+        result = instance.shotDistance(velocity, acceleration, time);
+        assertEquals(expResult, result, 0.0);
+        
+    }
 }
