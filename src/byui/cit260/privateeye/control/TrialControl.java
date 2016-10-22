@@ -10,5 +10,13 @@ package byui.cit260.privateeye.control;
  * @author User
  */
 public class TrialControl {
-    
+    public int accuse(int evidencePercentage, int turnsTaken, int randomNum) {
+        if (evidencePercentage < 0 || evidencePercentage > 100)
+            return -1;
+        if (turnsTaken < 0 || turnsTaken > 30)
+            return -1;
+        if (randomNum < 0 || randomNum > 100)
+            return -1;
+        return evidencePercentage + turnsTaken + randomNum;
+    }
 }
