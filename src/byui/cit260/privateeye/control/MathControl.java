@@ -45,7 +45,7 @@ public class MathControl {
         if (lengthBaseOne <= 0 || lengthBaseTwo <= 0 || areaTrapezoid <= 0)
             return -1;
         double heightTrapezoid = 2 * areaTrapezoid /(lengthBaseOne + lengthBaseTwo);
-            return heightTrapezoid;
+            return Math.round(heightTrapezoid*100)/100.0; //rounds answer to two decimal places
     }  
     
 }

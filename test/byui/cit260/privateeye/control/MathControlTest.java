@@ -238,4 +238,80 @@ public class MathControlTest {
         assertEquals(expResult, result, 0.0);
         
     }
+
+    /**
+     * Test of answerHomework method, of class MathControl.
+     */
+    @Test
+    public void testAnswerHomework() {
+        System.out.println("answerHomework test 1");
+        double lengthBaseOne = 5;
+        double lengthBaseTwo = 5;
+        double areaTrapezoid = 5;
+        MathControl instance = new MathControl();
+        double expResult = 1;
+        double result = instance.answerHomework(lengthBaseOne, lengthBaseTwo, areaTrapezoid);
+        assertEquals(expResult, result, 0.0);
+        
+        System.out.println("answerHomework test 2");
+        
+        lengthBaseOne = -5;
+        lengthBaseTwo = 5;
+        areaTrapezoid = 5;
+        expResult = -1;
+        
+        result = instance.answerHomework(lengthBaseOne, lengthBaseTwo, areaTrapezoid);
+        assertEquals(expResult, result, 0.0);
+        
+        System.out.println("answerHomework test 3");
+        
+        lengthBaseOne = 5;
+        lengthBaseTwo = -5;
+        areaTrapezoid = 5;
+        expResult = -1;
+        
+        result = instance.answerHomework(lengthBaseOne, lengthBaseTwo, areaTrapezoid);
+        assertEquals(expResult, result, 0.0);
+        
+        System.out.println("answerHomework test 4");
+        
+        lengthBaseOne = 5;
+        lengthBaseTwo = 5;
+        areaTrapezoid = -5;
+        expResult = -1;
+        
+        result = instance.answerHomework(lengthBaseOne, lengthBaseTwo, areaTrapezoid);
+        assertEquals(expResult, result, 0.0);
+        
+        System.out.println("answerHomework test 5");
+        
+        lengthBaseOne = 1;
+        lengthBaseTwo = 5;
+        areaTrapezoid = 5;
+        expResult = 1.67;
+        
+        result = instance.answerHomework(lengthBaseOne, lengthBaseTwo, areaTrapezoid);
+        assertEquals(expResult, result, 0.0);
+        
+        System.out.println("answerHomework test 6");
+        
+        lengthBaseOne = 5;
+        lengthBaseTwo = 1;
+        areaTrapezoid = 5;
+        expResult = 1.67;
+        
+        result = instance.answerHomework(lengthBaseOne, lengthBaseTwo, areaTrapezoid);
+        assertEquals(expResult, result, 0.0);
+        
+        System.out.println("answerHomework test 7");
+        
+        lengthBaseOne = 5;
+        lengthBaseTwo = 5;
+        areaTrapezoid = 1;
+        expResult = 0.2;
+        
+        result = instance.answerHomework(lengthBaseOne, lengthBaseTwo, areaTrapezoid);
+        assertEquals(expResult, result, 0.0);
+    }
+    
 }
