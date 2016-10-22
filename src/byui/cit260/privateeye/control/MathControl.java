@@ -37,4 +37,15 @@ public class MathControl {
        } else
            return -1;
     }
+    
+   public double answerHomework(double lengthBaseOne, double lengthBaseTwo, double areaTrapezoid)
+    {
+        //return height of the trapezoid
+        
+        if (lengthBaseOne <= 0 || lengthBaseTwo <= 0 || areaTrapezoid <= 0)
+            return -1;
+        double heightTrapezoid = 2 * areaTrapezoid /(lengthBaseOne + lengthBaseTwo);
+            return heightTrapezoid;
+    }  
+    
 }
