@@ -10,12 +10,18 @@ import byui.cit260.privateeye.model.Map;
 import byui.cit260.privateeye.model.Item;
 import byui.cit260.privateeye.model.Drone;
 import byui.cit260.privateeye.model.Player;
+import byui.cit260.privateeye.view.StartProgramView;
 import java.util.Scanner; 
 public class PrivateEye {
 
    
     public static void main(String[] args) {
+       
+        StartProgramView startProgramView = new StartProgramView();
+        startProgramView.displayStartProgramView();
         
+        
+        /*
         Drone testDrone = new Drone();
         
         testDrone.setDroneName("John Doe");
@@ -60,7 +66,7 @@ public class PrivateEye {
         System.out.println(locationInfo);
         System.out.println(mapInfo);
         System.out.println(playerInfo);
-        
+        */
         //Mark here. Hope this effing works finally
         
         
