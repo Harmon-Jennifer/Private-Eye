@@ -5,10 +5,27 @@
  */
 package byui.cit260.privateeye.control;
 
+import byui.cit260.privateeye.model.Player;
+import privateeye.PrivateEye;
+
 /**
  *
  * @author User
  */
 public class GameControl {
+
+    public static Player createPlayer(String name) {
+        
+        if (name == null) {
+            return null;
+        }
+        
+        Player player = new Player();
+        player.setName(name);
+        
+        PrivateEye.setPlayer(player); // save the player
+        
+        return player;
+    }
     
 }
