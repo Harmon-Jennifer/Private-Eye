@@ -9,12 +9,32 @@ import byui.cit260.privateeye.model.Location;
 import byui.cit260.privateeye.model.Map;
 import byui.cit260.privateeye.model.Item;
 import byui.cit260.privateeye.model.Drone;
+import byui.cit260.privateeye.model.Game;
 import byui.cit260.privateeye.model.Player;
 import byui.cit260.privateeye.view.StartProgramView;
 import java.util.Scanner; 
 public class PrivateEye {
 
-   
+    private static Game currentGame = null;
+    private static Player player = null;
+
+    public static Game getCurrentGame() {
+        return currentGame;
+    }
+
+    public static void setCurrentGame(Game currentGame) {
+        PrivateEye.currentGame = currentGame;
+    }
+
+    public static Player getPlayer() {
+        return player;
+    }
+
+    public static void setPlayer(Player player) {
+        PrivateEye.player = player;
+    }
+    
+    
     public static void main(String[] args) {
        
         StartProgramView startProgramView = new StartProgramView();
