@@ -25,7 +25,7 @@ public class HelpMenuView {
                   + "\nM - How to move."
                   + "\nI - How to interact with people and objects."
                   + "\nA - How to accuse a suspect."
-                  + "\nQ - Quit"
+                  + "\nE - Exit Help menu."
                   + "\n----------------------------------------------";
     }
 
@@ -34,7 +34,7 @@ public class HelpMenuView {
         boolean done = false; // loop will continue until done is true
         do {
             String menuOption = this.getMenuOption(); //call
-            if (menuOption.toUpperCase().equals("Q")) //player wants to quit
+            if (menuOption.toUpperCase().equals("E")) //player wants to quit
                 return; //exits game
             
             done = this.doAction(menuOption); //done is now true
@@ -79,9 +79,6 @@ public class HelpMenuView {
                 break;
             case "A":
                 this.helpAccuse();
-                break;
-            case "Q":
-                MainMenuView mainMenuView = new MainMenuView();
                 break;
             default:
                 System.out.println("\nInvalid option: Please select an option from the Help Menu.");

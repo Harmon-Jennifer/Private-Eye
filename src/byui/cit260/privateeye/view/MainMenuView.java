@@ -91,7 +91,7 @@ public class MainMenuView {
        GameControl.createNewGame(PrivateEye.getPlayer());
        
        GameMenuView gameMenu = new GameMenuView();
-       gameMenu.displayMenu();
+       gameMenu.displayGameMenu();
     }
     
     private void saveGame() {
