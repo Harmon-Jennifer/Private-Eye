@@ -9,11 +9,11 @@
  *
  * @author Konkles
  */
-//public class EvidenceMenuView {
-//    private String evidence;
+//public class EvidenceListView {
+//    private String evidenceList;
 //    
-//    private void EvidenceMenuView(){
-//        this.evidence = "\n" 
+//    private void EvidenceListView(){
+//        this.evidenceList = "\n" 
 //                  + "\n----------------------------------------------"
 //                  + "\n| Evidence Menu                              |"
 //                  + "\n----------------------------------------------"
