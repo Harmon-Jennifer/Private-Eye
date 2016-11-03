@@ -26,7 +26,7 @@ public class InventoryListView {
                   + "\nA - Notepad"
                   + "\nB - Pencil"
                   + "\nC - Your I.D."
-                  + "\nE - Exit Help menu."
+                  + "\nE - Exit Inventory list."
                   + "\n----------------------------------------------";
     }
 
