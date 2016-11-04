@@ -80,6 +80,9 @@ public class MainMenuView {
             case "H":
                 this.helpMenu();
                 break;
+            case "Z": //Homework test
+                this.homeworkView();
+                break;
             default:
                 System.out.println("\nInvalid option: Please select an option from the Main Menu.");
                 break;
@@ -108,6 +111,10 @@ public class MainMenuView {
        helpMenuView.displayHelpMenuView();
     }
     
+    private void homeworkView() {
+        HomeworkView homeworkView = new HomeworkView();
+        homeworkView.displayHomeworkView();
+    }
     
     
     

@@ -104,9 +104,9 @@ public class GameMenuView {
     }
 
     private void clueList() {
-        System.out.println("*** clueList function called ***");
-//        ClueListView clueListView = new ClueListView ();
-//        clueListView.displayClueListView();
+       //System.out.println("*** clueList function called ***");
+       CluesListView cluesListView = new CluesListView ();
+       cluesListView.displayCluesListView();
     }
 
     private void inventoryList() {
