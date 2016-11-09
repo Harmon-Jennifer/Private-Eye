@@ -17,7 +17,7 @@ public class HomeworkView {
     
     private void HomeworkView(){
         System.out.println("\nA Dumb Kid approaches, and offers help on the case "
-                + "if you'll help him with this homework. \nDespite your better"
+                + "if you'll help him with his homework. \nDespite your better"
                 + " judgment, you agree to help the Dumb Kid."
                 + "\nThe Dumb Kid smiles, and explains that he has"
                 + " to find the area of a trapezoid.");
