@@ -12,12 +12,10 @@ import java.util.Scanner;
  *
  * @author User
  */
-public class HelpMenuView {
+public class HelpMenuView extends View{
     
-    private String menu;
-    
-    private void HelpMenuView(){
-        this.menu = "\n" 
+    public HelpMenuView() {
+        super("\n" 
                   + "\n----------------------------------------------"
                   + "\n| Help Menu                                  |"
                   + "\n----------------------------------------------"
@@ -26,48 +24,15 @@ public class HelpMenuView {
                   + "\nI - How to interact with people and objects."
                   + "\nA - How to accuse a suspect."
                   + "\nE - Exit Help menu."
-                  + "\n----------------------------------------------";
+                  + "\n----------------------------------------------");
     }
 
-    void displayHelpMenuView() {
-        this.HelpMenuView();
-        boolean done = false; // loop will continue until done is true
-        do {
-            String menuOption = this.getMenuOption(); //call
-            if (menuOption.toUpperCase().equals("E")) //player wants to quit
-                return; //exits game
-            
-            done = this.doAction(menuOption); //done is now true
-            
-        } while (!done); //loop ends when done is true
-    }
-
-    private String getMenuOption() {
-        Scanner keyboard = new Scanner(System.in); // get infile for keyboard
-        String menuOption = "";
-        boolean valid = false; // initialize to not valid
+    @Override
+    public boolean doAction(String value) {
         
-        while (!valid) { // loop while an invalid value is entered
-            System.out.println("\n" + this.menu);
-            
-            menuOption = keyboard.nextLine(); // get next line typed on the keyboard
-            menuOption = menuOption.trim(); // trim off leading and trailing blanks
-            
-            if (menuOption.length() < 1) { // value is blank
-                System.out.println("\nInvalid value: value can not be blank");
-                continue;
-            }
-            
-            break; // end the loop
-        }                                
-        return menuOption; // return the value entered
-    }
-
-    private boolean doAction(String menuOption) {
+        value = value.toUpperCase();
         
-        menuOption = menuOption.toUpperCase();
-        
-        switch (menuOption) {
+        switch (value) {
             case "G":
                 this.helpGameGoal();
                 break;

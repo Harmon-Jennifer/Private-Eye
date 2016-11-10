@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author User
+ * @author Jennifer
  */
 public abstract class View implements ViewInterface {
     

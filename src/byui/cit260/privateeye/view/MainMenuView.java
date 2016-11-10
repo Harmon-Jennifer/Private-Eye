@@ -26,11 +26,6 @@ public class MainMenuView extends View {
                   + "\n----------------------------------------------");
     }
      
-    /**
-     *
-     * @param value
-     * @return
-     */
     @Override
     public boolean doAction(String value) {
         
@@ -61,9 +56,8 @@ public class MainMenuView extends View {
     
     private void startNewGame() {
        GameControl.createNewGame(PrivateEye.getPlayer());
-       
-       GameMenuView gameMenu = new GameMenuView();
-       gameMenu.displayGameMenu();
+       GameMenuView gameMenuView = new GameMenuView();
+       gameMenuView.display();
     }
     
     private void saveGame() {
@@ -76,8 +70,7 @@ public class MainMenuView extends View {
     
     private void helpMenu() {
        HelpMenuView helpMenuView = new HelpMenuView();
-       
-       helpMenuView.displayHelpMenuView();
+       helpMenuView.display();
     }
     
     private void homeworkView() {

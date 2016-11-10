@@ -4,76 +4,40 @@
  * and open the template in the editor.
  */
 package byui.cit260.privateeye.view;
-import java.util.Scanner;
 
 /**
  *
  * @author Konkles
  */
-public class GameMenuView {
+public class GameMenuView extends View {
     
-    private String gameMenu;
-    
-    private void GameMenuView(){
-        this.gameMenu = "\n" 
-                + "\n----------------------------------------------"
-                + "\n| Game Menu                                  |"
-                + "\n----------------------------------------------"
-                + "\nE - Evidence list"
-                + "\nC - Clue list"
-                + "\nI - Inventory list"
-                + "\nV - View map"
-                + "\nL - Move locations"
-                + "\nX - Explore location"
-                + "\nT - Talk to people"
-                + "\nM - Main Menu"
-                + "\n----------------------------------------------";
+    public GameMenuView() {
+        super("\n" 
+              + "\n----------------------------------------------"
+              + "\n| Game Menu                                  |"
+              + "\n----------------------------------------------"
+              + "\nE - Evidence list"
+              + "\nC - Clue list"
+              + "\nI - Inventory list"
+              + "\nV - View map"
+              + "\nL - Move locations"
+              + "\nX - Explore location"
+              + "\nT - Talk to people"
+              + "\nM - Main Menu"
+              + "\n----------------------------------------------");
     }
     
-    void displayGameMenu() {
-        this.GameMenuView();
-        boolean done = false; // loop will continue until done is true
-        do {
-            String menuOption = this.getMenuOption(); //call
-            if (menuOption.toUpperCase().equals("M")) //player wants to quit
-                return; //exits game
-            
-            done = this.doAction(menuOption); //done is now true
-            
-        } while (!done); //loop ends when done is true
-    }
-    
-    private String getMenuOption() {
-        Scanner keyboard = new Scanner(System.in); // get infile for keyboard
-        String menuOption = "";
-        boolean valid = false; // initialize to not valid
+    @Override
+    public boolean doAction(String value) {
         
-        while (!valid) { // loop while an invalid value is entered
-            System.out.println("\n" + this.gameMenu);
-            
-            menuOption = keyboard.nextLine(); // get next line typed on the keyboard
-            menuOption = menuOption.trim(); // trim off leading and trailing blanks
-            
-            if (menuOption.length() < 1) { // value is blank
-                System.out.println("\nInvalid value: value can not be blank");
-                continue;
-            }
-            
-            break; // end the loop
-        }                                
-        return menuOption; // return the value entered
-    }
-    
-    private boolean doAction(String menuOption) {
+        value = value.toUpperCase(); // convert to all upper case
         
-        menuOption = menuOption.toUpperCase();
-        
-        switch (menuOption) {
+        switch (value) {
             case "E":
                 this.evidenceList();
                 break;
             case "C":
-                this.clueList();
+                this.cluesList();
                 break;
             case "I":
                 this.inventoryList();
@@ -99,20 +63,20 @@ public class GameMenuView {
 
     private void evidenceList() {
         System.out.println("*** evidenceList function called ***");
-//        EvidenceListView evidenceListView = new EvidenceListView ();
-//        evidenceListView.displayEvidenceListView();
+        EvidenceListView evidenceListView = new EvidenceListView ();
+        evidenceListView.display();
     }
 
-    private void clueList() {
-       //System.out.println("*** clueList function called ***");
+    private void cluesList() {
+       System.out.println("*** clueList function called ***");
        CluesListView cluesListView = new CluesListView ();
-       cluesListView.displayCluesListView();
+       cluesListView.display();
     }
 
     private void inventoryList() {
         System.out.println("*** inventoryList function called ***");
-//        InventoryListView inventoryListView = new InventoryListView ();
-//        inventoryListView.displayInventoryListView();
+        InventoryListView inventoryListView = new InventoryListView ();
+        inventoryListView.display();
     }
 
     private void viewMap() {

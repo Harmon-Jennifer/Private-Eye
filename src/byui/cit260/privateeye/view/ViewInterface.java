@@ -7,7 +7,7 @@ package byui.cit260.privateeye.view;
 
 /**
  *
- * @author User
+ * @author Jennifer
  */
 public interface ViewInterface {
     
