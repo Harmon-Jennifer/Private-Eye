@@ -21,8 +21,6 @@ public class MathControl {
         return Math.round(answer*100)/100.0; //rounds answer to two decimal places
     }
     
-    
-    
     //Distance (d), velocity(v), acceleration (a), time (t)
     public double shotDistance (int v, int a, double t) {       
        if(a < 0 || a > 50)
