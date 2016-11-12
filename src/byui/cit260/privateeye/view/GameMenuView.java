@@ -23,10 +23,10 @@ public class GameMenuView extends View {
               + "\nL - Move locations"
               + "\nX - Explore location"
               + "\nT - Talk to people"
-              + "\nM - Main Menu"
+              + "\nQ - Main Menu"
               + "\n----------------------------------------------");
     }
-    
+
     @Override
     public boolean doAction(String value) {
         
@@ -60,7 +60,7 @@ public class GameMenuView extends View {
         }
         return false;
     }
-
+    
     private void evidenceList() {
         System.out.println("*** evidenceList function called ***");
         EvidenceListView evidenceListView = new EvidenceListView ();
