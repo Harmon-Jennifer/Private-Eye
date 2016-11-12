@@ -24,7 +24,7 @@ public class InventoryListView extends View {
               + "\nA - Notepad"
               + "\nB - Pencil"
               + "\nC - Your I.D."
-              + "\nE - Exit Inventory list."
+              + "\nQ - Exit Inventory list."
               + "\n----------------------------------------------");
     }
 
