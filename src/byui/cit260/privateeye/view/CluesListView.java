@@ -21,7 +21,7 @@ public class CluesListView extends View {
               + "\n     INSERT LIST OF NUMBERED CLUES"
               + "\n----------------------------------------------"
               + "\nD - Get description of the clue."
-              + "\nE - Exit Clues List."
+              + "\nQ - Exit Clues List."
               + "\n----------------------------------------------");
     
     }

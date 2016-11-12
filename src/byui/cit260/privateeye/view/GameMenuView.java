@@ -26,7 +26,7 @@ public class GameMenuView extends View {
               + "\nQ - Exit Game Menu"
               + "\n----------------------------------------------");
     }
-    
+
     @Override
     public boolean doAction(String value) {
         
@@ -60,7 +60,7 @@ public class GameMenuView extends View {
         }
         return false;
     }
-
+    
     private void evidenceList() {
         EvidenceListView evidenceListView = new EvidenceListView ();
         evidenceListView.display();
