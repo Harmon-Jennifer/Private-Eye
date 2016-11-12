@@ -4,13 +4,9 @@
  * and open the template in the editor.
  */
 package byui.cit260.privateeye.view;
-import byui.cit260.privateeye.control.GameControl;
-import byui.cit260.privateeye.model.Player;
-import privateeye.PrivateEye;
-import java.util.Scanner;
 /**
  *
- * @author User
+ * @author Konkles
  */
 public class HelpMenuView extends View{
     

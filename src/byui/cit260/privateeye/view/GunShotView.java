@@ -11,10 +11,6 @@ import java.util.Scanner;
  * @author Konkles
  */
 public class GunShotView {
-    public static void main(String[] args){
-        GunShotView shooter = new GunShotView();
-        shooter.displayGunShotView();
-    }    
            
     public String menu;
     

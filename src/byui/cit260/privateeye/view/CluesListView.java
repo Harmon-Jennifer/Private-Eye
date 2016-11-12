@@ -17,7 +17,7 @@ public class CluesListView extends View {
     public CluesListView() {
         super("\n" 
               + "\n----------------------------------------------"
-              + "\n| Clues                                      |"
+              + "\n| Clues Menu                                 |"
               + "\n     INSERT LIST OF NUMBERED CLUES"
               + "\n----------------------------------------------"
               + "\nD - Get description of the clue."
@@ -36,7 +36,7 @@ public class CluesListView extends View {
                 this.cluesGetDescription();
                 break;
             default:
-                System.out.println("\nInvalid option: Please select an option from the Help Menu.");
+                System.out.println("\nInvalid option: Please select an option from the Clues Menu.");
                 break;
         }
         return false;

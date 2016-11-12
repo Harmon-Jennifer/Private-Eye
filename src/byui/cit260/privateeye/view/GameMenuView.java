@@ -23,7 +23,7 @@ public class GameMenuView extends View {
               + "\nL - Move locations"
               + "\nX - Explore location"
               + "\nT - Talk to people"
-              + "\nM - Main Menu"
+              + "\nQ - Exit Game Menu"
               + "\n----------------------------------------------");
     }
     
@@ -43,7 +43,7 @@ public class GameMenuView extends View {
                 this.inventoryList();
                 break;
             case "V":
-                this.viewMap();
+                this.mapView();
                 break;
             case "L":
                 this.moveLocation();
@@ -55,36 +55,35 @@ public class GameMenuView extends View {
                 this.talkToPeople();
                 break;
             default:
-                System.out.println("\nInvalid option: Please select an option from the Main Menu.");
+                System.out.println("\nInvalid option: Please select an option from the Game Menu.");
                 break;
         }
         return false;
     }
 
     private void evidenceList() {
-        System.out.println("*** evidenceList function called ***");
         EvidenceListView evidenceListView = new EvidenceListView ();
         evidenceListView.display();
     }
 
     private void cluesList() {
-       System.out.println("*** clueList function called ***");
        CluesListView cluesListView = new CluesListView ();
        cluesListView.display();
     }
 
     private void inventoryList() {
-        System.out.println("*** inventoryList function called ***");
         InventoryListView inventoryListView = new InventoryListView ();
         inventoryListView.display();
     }
 
-    private void viewMap() {
-        System.out.println("*** viewMap function called ***");
+    protected void mapView() {
+        MapView mapView = new MapView();
+        mapView.display();
     }
 
-    private void moveLocation() {
-        System.out.println("*** moveLocation function called ***");
+    protected void moveLocation() {
+        MoveLocationsView moveLocationsView = new MoveLocationsView();
+        moveLocationsView.display();
     }
 
     private void exploreLocation() {

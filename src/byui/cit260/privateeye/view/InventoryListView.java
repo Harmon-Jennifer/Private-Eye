@@ -5,11 +5,6 @@
  */
 
 package byui.cit260.privateeye.view;
-import byui.cit260.privateeye.control.GameControl;
-import byui.cit260.privateeye.model.Player;
-import privateeye.PrivateEye;
-import java.util.Scanner;
-
 /**
  *
  * @author Jennifer
@@ -24,7 +19,7 @@ public class InventoryListView extends View {
               + "\nA - Notepad"
               + "\nB - Pencil"
               + "\nC - Your I.D."
-              + "\nE - Exit Inventory list."
+              + "\nQ - Exit Inventory list."
               + "\n----------------------------------------------");
     }
 
