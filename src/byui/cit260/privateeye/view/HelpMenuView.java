@@ -23,7 +23,7 @@ public class HelpMenuView extends View{
                   + "\nM - How to move."
                   + "\nI - How to interact with people and objects."
                   + "\nA - How to accuse a suspect."
-                  + "\nE - Exit Help menu."
+                  + "\nQ - Exit Help menu."
                   + "\n----------------------------------------------");
     }
 
