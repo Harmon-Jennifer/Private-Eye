@@ -91,6 +91,7 @@ public class GameMenuView extends View {
     }
 
     private void talkToPeople() {
-        System.out.println("*** talkToPeople function called ***");
+        TalkView talkView = new TalkView();
+        talkView.display();
     }
 }

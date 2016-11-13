@@ -44,9 +44,6 @@ public class MainMenuView extends View {
             case "H":
                 this.helpMenu();
                 break;
-            case "Z": //Homework test
-                this.homeworkView();
-                break;
             default:
                 System.out.println("\nInvalid option: Please select an option from the Main Menu.");
                 break;
@@ -73,10 +70,6 @@ public class MainMenuView extends View {
        helpMenuView.display();
     }
     
-    private void homeworkView() {
-        HomeworkView homeworkView = new HomeworkView();
-        homeworkView.displayHomeworkView();
-    }
     
     
     
