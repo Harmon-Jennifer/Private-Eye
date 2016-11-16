@@ -11,6 +11,54 @@ import java.util.Objects;
  *
  * @author Jennifer
  */
-public class Game {
+public class Game implements Serializable {
+
+    private Item[] inventoryList;
+    private Item[] clueList;
+    private Item[] evidenceList;
+
+    private Map map;
+    private Player player;
+    
+    public Map getMap() {
+        return map;
+    }
+
+    public void setMap(Map map) {
+        this.map = map;
+    }
+
+    public Player getPlayer() {
+        return player;
+    }
+
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
+    
+    
+    public Item[] getInventoryList() {
+        return inventoryList;
+    }
+
+    public void setInventoryList(Item[] inventoryList) {
+        this.inventoryList = inventoryList;
+    }
+
+    public Item[] getClueList() {
+        return clueList;
+    }
+
+    public void setClueList(Item[] clueList) {
+        this.clueList = clueList;
+    }
+
+    public Item[] getEvidenceList() {
+        return evidenceList;
+    }
+
+    public void setEvidenceList(Item[] evidenceList) {
+        this.evidenceList = evidenceList;
+    }
     
 }

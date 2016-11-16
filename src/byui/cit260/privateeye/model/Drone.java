@@ -12,74 +12,31 @@ import java.util.Objects;
  *
  * @author Konkles
  */
-public class Drone implements Serializable{
-    private String droneName;
-    private String droneType;
-    private String droneDesc;
+public enum Drone implements Serializable{
 
-    public Drone() {
-    }
+    Murderer("This person that dunnit"),
+    MathGenius("What's up with the bunnies?"),
+    HomeworkKid("Absolutely hopeless"),
+    Suspect("There's gonna be several of these");
+    
+    private final String droneType;
+    private final String droneDesc;
 
-    public String getDroneName() {
-        return droneName;
-    }
-
-    public void setDroneName(String droneName) {
-        this.droneName = droneName;
-    }
-
+    Drone(String description){
+    this.droneDesc = description;
+    droneType = new String("droneType");
+}
     public String getDroneType() {
         return droneType;
-    }
-
-    public void setDroneType(String droneType) {
-        this.droneType = droneType;
     }
 
     public String getDroneDesc() {
         return droneDesc;
     }
 
-    public void setDroneDesc(String droneDesc) {
-        this.droneDesc = droneDesc;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 67 * hash + Objects.hashCode(this.droneName);
-        hash = 67 * hash + Objects.hashCode(this.droneType);
-        hash = 67 * hash + Objects.hashCode(this.droneDesc);
-        return hash;
-    }
-
     @Override
     public String toString() {
-        return "Drone{" + "droneName=" + droneName + ", droneType=" + droneType + ", droneDesc=" + droneDesc + '}';
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Drone other = (Drone) obj;
-        if (!Objects.equals(this.droneName, other.droneName)) {
-            return false;
-        }
-        if (!Objects.equals(this.droneType, other.droneType)) {
-            return false;
-        }
-        if (!Objects.equals(this.droneDesc, other.droneDesc)) {
-            return false;
-        }
-        return true;
+        return "Drone{" + "droneName=" + this + ", droneType=" + droneType + ", droneDesc=" + droneDesc + '}';
     }
     
     
