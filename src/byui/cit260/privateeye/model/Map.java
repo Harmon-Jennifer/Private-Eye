@@ -18,7 +18,8 @@ public class Map implements Serializable{
     private int numColumns;
     private String mapName;
     private int localeList;
-
+    private Location [][] locations;
+    
     public Map() {
     }
     
