@@ -7,6 +7,7 @@ package byui.cit260.privateeye.model;
 
 import java.io.Serializable;
 import java.util.Objects;
+import java.util.Random;
 
 /**
  *
@@ -14,33 +15,33 @@ import java.util.Objects;
  */
 public class Map implements Serializable{
 
-    private int numRows;
-    private int numColumns;
+    public static final int NUMROWS = 5;
+    public static final int NUMCOLUMNS = 5;
     private String mapName;
     private int localeList;
-    private Location [][] locations;
+    private Location [][] matrix = new Location [NUMROWS][NUMCOLUMNS];
     
     public Map() {
     }
+
+    public void init(){
+        Random rand = new Random();        
+        for(int row = 0; row < NUMROWS; row++){
+            for(int col = 0; col < NUMCOLUMNS; col++){
+                Location locale = new Location();
+                locale.setLocaleColumn(col);
+                locale.setLocaleRow(row);
+                locale.setLocaleVisited(false);               
+                int randLocale = rand.nextInt(LocaleType.values().length);
+                locale.setLocaleType(LocaleType.values()[randLocale]);
+                matrix[row][col] = locale;
+            }
+        }
+    }
+    public Location getLocaleAt(int row, int col){
+        return matrix[row][col];
+    }
     
-    
-    
-    public int getNumRows() {
-        return numRows;
-    }
-
-    public void setNumRows(int numRows) {
-        this.numRows = numRows;
-    }
-
-    public int getNumColumns() {
-        return numColumns;
-    }
-
-    public void setNumColumns(int numColumns) {
-        this.numColumns = numColumns;
-    }
-
     public String getMapName() {
         return mapName;
     }
@@ -56,12 +57,12 @@ public class Map implements Serializable{
     public void setLocaleList(int localeList) {
         this.localeList = localeList;
     }
-
+    
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 53 * hash + this.numRows;
-        hash = 53 * hash + this.numColumns;
+        hash = 53 * hash + this.NUMROWS;
+        hash = 53 * hash + this.NUMCOLUMNS;
         hash = 53 * hash + Objects.hashCode(this.mapName);
         hash = 53 * hash + this.localeList;
         return hash;
@@ -79,10 +80,10 @@ public class Map implements Serializable{
             return false;
         }
         final Map other = (Map) obj;
-        if (this.numRows != other.numRows) {
+        if (this.NUMROWS != other.NUMROWS) {
             return false;
         }
-        if (this.numColumns != other.numColumns) {
+        if (this.NUMCOLUMNS != other.NUMCOLUMNS) {
             return false;
         }
         if (this.localeList != other.localeList) {
@@ -96,7 +97,7 @@ public class Map implements Serializable{
 
     @Override
     public String toString() {
-        return "Map{" + "numRows=" + numRows + ", numColumns=" + numColumns + ", mapName=" + mapName + ", localeList=" + localeList + '}';
+        return "Map{" + "NUMROWS=" + NUMROWS + ", NUMCOLUMNS=" + NUMCOLUMNS + ", mapName=" + mapName + ", localeList=" + localeList + '}';
     }
     
     

@@ -13,36 +13,67 @@ import java.util.Objects;
  *
  * @author Jennifer
  */
-public enum Location implements Serializable{
+public class Location implements Serializable{
     
-    Loc1("location1"),
-    //add 2 - 24 later
-    Loc25("location1");
     
     // class instance variables
-    private String localeDesc;
+    private int localeRow;
+    private int localeColumn;
+    private Boolean localeVisited;
     private Drone droneList;
-
-    Location(String description) {
-        this.localeDesc = description;
+    private LocaleType localeType;
+    private final String coordinates;
+    
+    Location() {
+        coordinates = ("Row" + localeRow + "Column" + localeColumn);
         ArrayList<Drone> droneList = new ArrayList<>();
-    }
-
-    public String getLocaleDesc() {
-        return localeDesc;
+        
     }
 
     public Drone getDroneList() {
         return droneList;
     }
 
+    public void setLocaleType(LocaleType localeType) {
+        this.localeType = localeType;
+    }
 
+    public LocaleType getLocaleType() {
+        return localeType;
+    }
 
+    public int getLocaleRow() {
+        return localeRow;
+    }
+
+    public void setLocaleRow(int localeRow) {
+        this.localeRow = localeRow;
+    }
+
+    public int getLocaleColumn() {
+        return localeColumn;
+    }
+
+    public void setLocaleColumn(int localeColumn) {
+        this.localeColumn = localeColumn;
+    }
+
+    public Boolean getLocaleVisited() {
+        return localeVisited;
+    }
+
+    public void setLocaleVisited(Boolean localeVisited) {
+        this.localeVisited = localeVisited;
+    }
+
+    
     @Override
     public String toString() {
-        return "Location{" + "localeName=" + this + ", localeDesc=" + localeDesc + ", droneList=" + droneList + '}';
+        String location = ("coordinates=" + coordinates + ", localeType=" + this +  ", droneList=" + droneList);
+        return location;
     }
-    
+
+
     
 }
 

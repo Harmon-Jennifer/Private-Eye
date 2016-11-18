@@ -21,8 +21,7 @@ public class GameControl {
     public static void createNewGame(Player player) {
         
         Game currentGame = new Game(); //create new game
-        PrivateEye.setCurrentGame(currentGame); // save in PrivateEye
-        
+               
         currentGame.setPlayer(player); // save player in game
         
         //create the inventory list
@@ -36,15 +35,16 @@ public class GameControl {
         currentGame.setClueList(clueList);
         
         Map map = MapControl.createMap(); // create and initialize new map
+        map.init();
         currentGame.setMap(map); // save map in game
         
+        PrivateEye.setCurrentGame(currentGame); // save in PrivateEye
     }
     
     public static Item[] createInventoryList() {
         
         // created array(list) of inventory items
-        Item[] inventoryItem =
-                new Item[16];
+        Item[] inventoryItem = new Item[16];
         
         Item paper = new Item();
         paper.setItemName("Paper");
@@ -70,8 +70,7 @@ public class GameControl {
     public static Item[] createEvidenceList() {
         
         // created array(list) of inventory items
-        Item[] evidenceItem =
-                new Item[16];
+        Item[] evidenceItem = new Item[16];
         
         Item glove = new Item();
         glove.setItemName("Glove");
@@ -97,8 +96,7 @@ public class GameControl {
     public static Item[] createClueList() {
         
         // created array(list) of inventory items
-        Item[] clueItem =
-                new Item[16];
+        Item[] clueItem = new Item[16];
         
         Item gun = new Item();
         gun.setItemName("Gun");

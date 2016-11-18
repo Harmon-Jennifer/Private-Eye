@@ -5,6 +5,9 @@
  */
 package byui.cit260.privateeye.view;
 
+import byui.cit260.privateeye.model.Map;
+import privateeye.PrivateEye;
+
 /**
  *
  * @author Konkles
@@ -76,9 +79,18 @@ public class GameMenuView extends View {
         inventoryListView.display();
     }
 
-    protected void mapView() {
-        MapView mapView = new MapView();
-        mapView.display();
+    private void mapView() {
+        Map map = PrivateEye.getCurrentGame().getMap();
+        System.out.println("\n\n------------------");
+        for(int row = 0; row < Map.NUMROWS; row++){
+            System.out.print("| ");
+            for(int col = 0; col < Map.NUMCOLUMNS; col++){
+                char localeType = map.getLocaleAt(row, col).getLocaleType().toString().charAt(0);
+                System.out.print(+ localeType + " ");
+            }
+            System.out.println("");
+        }
+        System.out.println("------------------\n\n");
     }
 
     protected void moveLocation() {

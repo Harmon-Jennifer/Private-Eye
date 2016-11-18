@@ -52,7 +52,8 @@ public class MainMenuView extends View {
     }
     
     private void startNewGame() {
-       GameControl.createNewGame(PrivateEye.getPlayer());
+       GameControl gameControl = new GameControl();
+       gameControl.createNewGame(PrivateEye.getPlayer());
        GameMenuView gameMenuView = new GameMenuView();
        gameMenuView.display();
     }

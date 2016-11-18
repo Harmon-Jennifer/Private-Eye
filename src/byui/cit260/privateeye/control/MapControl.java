@@ -14,10 +14,7 @@ import byui.cit260.privateeye.model.Map;
 public class MapControl {
     public static Map createMap() {
         // create the map
-        Map map = null;
-        
-        System.out.println("\n*** createMap() called ***");
-        
+        Map map = new Map();
         return map;
     }
 }

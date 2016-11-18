@@ -9,7 +9,7 @@ package byui.cit260.privateeye.model;
  *
  * @author Jennifer
  */
-public enum LocationType {
+public enum LocaleType {
     NONE,
     LIBRARY,
     ALLEY,
