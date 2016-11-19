@@ -114,5 +114,20 @@ public class TrialControlTest {
         result = instance.accuse(evidencePercentage, turnsTaken, randomNum);
         assertEquals(expResult, result);
     }
+
+    /**
+     * Test of getPercentage method, of class TrialControl.
+     */
+    @Test
+    public void testGetPercentage() {
+        System.out.println("getPercentage 1");
+        int[] percentages = {3,2,1};
+        TrialControl instance = new TrialControl();
+        int expResult = 6;
+        int result = instance.getPercentage(percentages);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
+    }
     
 }

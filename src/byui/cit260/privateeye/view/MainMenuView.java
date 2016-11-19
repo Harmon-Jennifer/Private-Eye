@@ -5,6 +5,7 @@
  */
 package byui.cit260.privateeye.view;
 import byui.cit260.privateeye.control.GameControl;
+import byui.cit260.privateeye.control.TrialControl;
 import privateeye.PrivateEye;
 
 /**
@@ -44,6 +45,9 @@ public class MainMenuView extends View {
             case "H":
                 this.helpMenu();
                 break;
+            case "Z":
+                this.percTest();
+                break;
             default:
                 System.out.println("\nInvalid option: Please select an option from the Main Menu.");
                 break;
@@ -71,7 +75,12 @@ public class MainMenuView extends View {
        helpMenuView.display();
     }
     
-    
+    private void percTest() {
+        TrialControl trial = new TrialControl();
+        int[] testData = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        int testAnswer = trial.getPercentage(testData);
+        System.out.println("\nThe percentage total is " + testAnswer + "\n\n");
+    }
     
     
     
