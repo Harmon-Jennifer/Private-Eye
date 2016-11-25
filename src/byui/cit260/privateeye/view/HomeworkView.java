@@ -70,6 +70,12 @@ public class HomeworkView {
         if (menuOption.equals("E"))
             return true; //return to previous menu
         
+        try {
+        int menuCheck = Integer.parseInt(menuOption);
+        } catch (NumberFormatException nf){
+            System.out.println("\nYou must enter a valid number. Try again or"
+                    + "press E to quit./n");
+        }
         int input = Integer.parseInt(menuOption);
         
         if (input == 9){
