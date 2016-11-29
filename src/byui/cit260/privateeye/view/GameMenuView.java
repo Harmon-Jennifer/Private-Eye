@@ -86,7 +86,7 @@ public class GameMenuView extends View {
             System.out.print("| ");
             for(int col = 0; col < Map.NUMCOLUMNS; col++){
                 char localeType = map.getLocaleAt(row, col).getLocaleType().toString().charAt(0);
-                System.out.print(+ localeType + " ");
+                System.out.print("" + localeType + " ");
             }
             System.out.println("");
         }

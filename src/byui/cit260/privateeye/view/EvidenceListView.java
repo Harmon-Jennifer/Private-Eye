@@ -6,6 +6,8 @@
 package byui.cit260.privateeye.view;
 
 import java.util.Scanner;
+import byui.cit260.privateeye.control.ListControl;
+import java.util.Arrays;
 
 /**
  *
@@ -26,6 +28,7 @@ public class EvidenceListView extends View {
               + "\n| Evidence Menu                              |"
               + "\n----------------------------------------------"
               + "\nA - Add to evidence"
+              + "\nS - Sort evidence"  
               + "\nD - Delete from evidence"
               + "\nG - Game Menu"
               + "\n----------------------------------------------");
@@ -40,6 +43,9 @@ public class EvidenceListView extends View {
             case "A":
                 this.addEvidence();
                 break;
+            case "S":
+                this.sortEvidence();
+                break;
             case "D":
                 this.deleteEvidence();
                 break;
@@ -53,6 +59,10 @@ public class EvidenceListView extends View {
     private void addEvidence() {
         System.out.println("*** addEvidence function called ***");
     }
+    
+    private void sortEvidence() {
+        System.out.println("Function called to Sort List");
+        }
 
     private void deleteEvidence() {
         System.out.println("*** deleteEvidence function called ***");

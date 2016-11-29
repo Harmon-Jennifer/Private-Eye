@@ -19,14 +19,14 @@ public class TrialControlTest {
 
     /**
      * Test of accuse method, of class TrialControl.
-     */
+    
     @Test
     public void testAccuse() {
         System.out.println("accuse 1");
         int evidencePercentage = 5;
         int turnsTaken = 5;
         int randomNum = 5;
-        TrialControl instance = new TrialControl();
+       TrialControl instance = new TrialControl();
         int expResult = 15;
         int result = instance.accuse(evidencePercentage, turnsTaken, randomNum);
         assertEquals(expResult, result);

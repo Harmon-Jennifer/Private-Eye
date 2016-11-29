@@ -17,7 +17,9 @@ public class Player implements Serializable {
     private String name;
     private String action;
     private double turnsLeft;
-    private String itemList;
+    private String inventoryList;
+    private String cluesList;
+    private String evidenceList;
 
     public Player() {
     }
@@ -47,12 +49,28 @@ public class Player implements Serializable {
         this.turnsLeft = turnsLeft;
     }
 
-    public String getItemList() {
-        return itemList;
+    public String getInventoryList() {
+        return inventoryList;
     }
 
-    public void setItemList(String itemList) {
-        this.itemList = itemList;
+    public void setInventoryList(String inventoryList) {
+        this.inventoryList = inventoryList;
+    }
+
+    public String getCluesList() {
+        return cluesList;
+    }
+
+    public void setCluesList(String cluesList) {
+        this.cluesList = cluesList;
+    }
+
+    public String getEvidenceList() {
+        return evidenceList;
+    }
+
+    public void setEvidenceList(String evidenceList) {
+        this.evidenceList = evidenceList;
     }
 
     @Override
@@ -61,13 +79,15 @@ public class Player implements Serializable {
         hash = 79 * hash + Objects.hashCode(this.name);
         hash = 79 * hash + Objects.hashCode(this.action);
         hash = 79 * hash + (int) (Double.doubleToLongBits(this.turnsLeft) ^ (Double.doubleToLongBits(this.turnsLeft) >>> 32));
-        hash = 79 * hash + Objects.hashCode(this.itemList);
+        hash = 79 * hash + Objects.hashCode(this.inventoryList);
+        hash = 79 * hash + Objects.hashCode(this.cluesList);
+        hash = 79 * hash + Objects.hashCode(this.evidenceList);
         return hash;
     }
 
     @Override
     public String toString() {
-        return "Player{" + "name=" + name + ", action=" + action + ", turnsLeft=" + turnsLeft + ", itemList=" + itemList + '}';
+        return "Player{" + "name=" + name + ", action=" + action + ", turnsLeft=" + turnsLeft + ", inventoryList=" + inventoryList + '}';
     }
 
     
@@ -92,7 +112,13 @@ public class Player implements Serializable {
         if (!Objects.equals(this.action, other.action)) {
             return false;
         }
-        if (!Objects.equals(this.itemList, other.itemList)) {
+        if (!Objects.equals(this.inventoryList, other.inventoryList)) {
+            return false;
+        }
+        if (!Objects.equals(this.cluesList, other.cluesList)) {
+            return false;
+        }
+        if (!Objects.equals(this.evidenceList, other.evidenceList)) {
             return false;
         }
         return true;
