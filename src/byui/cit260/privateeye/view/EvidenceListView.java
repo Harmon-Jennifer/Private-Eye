@@ -30,7 +30,7 @@ public class EvidenceListView extends View {
               + "\nA - Add to evidence"
               + "\nS - Sort evidence"  
               + "\nD - Delete from evidence"
-              + "\nG - Game Menu"
+              + "\nQ - Game Menu"
               + "\n----------------------------------------------");
     }
     
