@@ -81,16 +81,23 @@ public class GameMenuView extends View {
 
     private void mapView() {
         Map map = PrivateEye.getCurrentGame().getMap();
-        System.out.println("\n\n------------------");
-        for(int row = 0; row < Map.NUMROWS; row++){
-            System.out.print("| ");
+        int visited = map.sumMapVisited(map); 
+        System.out.println("\n\n*---------------*");
+        System.out.println("| Visited: "+visited+"/25 |");
+        System.out.println("|---------------|");
+        System.out.println("|   | 1 2 3 4 5 |");
+        System.out.println("|---------------|");
+        int i = 1;
+        for(int row = 0; row < Map.NUMROWS; row++){            
+            System.out.print("| "+i+" | ");
+            i++;
             for(int col = 0; col < Map.NUMCOLUMNS; col++){
                 char localeType = map.getLocaleAt(row, col).getLocaleType().toString().charAt(0);
-                System.out.print(+ localeType + " ");
+                System.out.print(localeType + " ");
             }
-            System.out.println("");
+            System.out.println("|");
         }
-        System.out.println("------------------\n\n");
+        System.out.println("*---------------*");
     }
 
     protected void moveLocation() {
