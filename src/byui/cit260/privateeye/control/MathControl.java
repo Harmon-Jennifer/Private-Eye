@@ -5,13 +5,15 @@
  */
 package byui.cit260.privateeye.control;
 
+import byui.cit260.privateeye.exceptions.MathControlException;
+
 /**
  *
  * @author Mark
  */
 public class MathControl {
     
-    public double answerBunny(int brownBunny, int blackBunny) {
+    public double answerBunny(int brownBunny, int blackBunny) throws MathControlException {
         //return percentage of black bunnies
         if (blackBunny < 1 || blackBunny > 10)
             return -1;
@@ -36,8 +38,7 @@ public class MathControl {
            return -1;
     }
     
-   public double answerHomework(double lengthBaseOne, double lengthBaseTwo, double areaTrapezoid)
-    {
+   public double answerHomework(double lengthBaseOne, double lengthBaseTwo, double areaTrapezoid) {
         //return height of the trapezoid
         
         if (lengthBaseOne <= 0 || lengthBaseTwo <= 0 || areaTrapezoid <= 0)

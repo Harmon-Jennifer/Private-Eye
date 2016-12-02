@@ -19,7 +19,7 @@ public class Map implements Serializable{
     public static final int NUMCOLUMNS = 5;
     private String mapName;
     private int localeList;
-    private Location [][] matrix = new Location [NUMROWS][NUMCOLUMNS];
+    private final Location [][] matrix = new Location [NUMROWS][NUMCOLUMNS];
     
     public Map() {
     }
@@ -38,6 +38,22 @@ public class Map implements Serializable{
             }
         }
     }
+    
+    public int sumMapVisited(Map map) {
+        
+        int i = 0;
+        for(int row = 0; row < Map.NUMROWS; row++){
+            for(int col = 0; col < Map.NUMCOLUMNS; col++){
+                boolean visited = map.getLocaleAt(row, col).getLocaleVisited();
+                if(visited == true){
+                    i++;
+                }
+            }
+        }
+        
+        return i;
+    }
+    
     public Location getLocaleAt(int row, int col){
         return matrix[row][col];
     }

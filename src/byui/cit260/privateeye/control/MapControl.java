@@ -16,5 +16,5 @@ public class MapControl {
         // create the map
         Map map = new Map();
         return map;
-    }
+    }   
 }
