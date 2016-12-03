@@ -19,6 +19,8 @@ import java.io.PrintWriter;
 import java.util.Scanner; 
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+
 public class PrivateEye {
 
     private static Game currentGame = null;
@@ -67,9 +69,9 @@ public class PrivateEye {
         PrivateEye.logFile = logFile;
     }
     
-    public static void main(String[] args) {
+    public static void main(String[] args)  throws IOException {
        
-        StartProgramView startProgramView = new StartProgramView();
+        StartProgramView startProgramView = null;
         try{
             //open character stream files for end user input and output
             PrivateEye.inFile = new BufferedReader(new InputStreamReader(System.in));
@@ -78,11 +80,11 @@ public class PrivateEye {
             String filePath = "log.txt";
             PrivateEye.logFile = new PrintWriter(filePath);
             
+            startProgramView = new StartProgramView();
             startProgramView.displayStartProgramView();
-        } catch (Throwable te) {
-            System.out.println(te.getMessage());
-            te.printStackTrace();
+        } catch (Exception e) {
             startProgramView.displayStartProgramView();
+            //e.printStackTrace();
         }
         finally {
             try {
@@ -92,7 +94,7 @@ public class PrivateEye {
                     PrivateEye.outFile.close();
                 if (PrivateEye.logFile != null)
                     PrivateEye.logFile.close();
-            } catch (IOException ex) {
+            } catch (IOException e) {
                 System.out.println("Error closing files");
                 return;
             }    

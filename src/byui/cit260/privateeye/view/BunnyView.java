@@ -11,13 +11,13 @@ import java.util.Scanner;
  *
  * @author Jennifer
  */
-public class BunnyView {
+public class BunnyView extends View {
     
     private String menu;
     
     private void BunnyView(){
         
-        System.out.println("\nThere's an odd-looking man in a tweed jacket. He's "
+        this.console.println("\nThere's an odd-looking man in a tweed jacket. He's "
                 + "carrying a burlap sack and muttering something. You approach "
                 + "him and ask about the murder. He laughs. Then says, he'll "
                 + "help you, but first you must answer his math riddle correctly. "
@@ -38,7 +38,7 @@ public class BunnyView {
             String menuOption = this.getAnswer(); //call
             if (menuOption.toUpperCase().equals("E")) //player wants to quit
             {
-                System.out.println("You can't leave, shouts the Mad Math Genius as he stabs you in the back.");
+                this.console.println("You can't leave, shouts the Mad Math Genius as he stabs you in the back.");
                 return; //exits game
             }
             
@@ -47,29 +47,32 @@ public class BunnyView {
         } while (!done); //loop ends when done is true
     }
 
-    private String getAnswer() {
-        Scanner keyboard = new Scanner(System.in); // get infile for keyboard
-        String menuOption = "";
-        boolean valid = false; // initialize to not valid
+    public String getAnswer() {
         
-        while (!valid) { // loop while an invalid value is entered
-            System.out.println("\n" + this.menu);
+        boolean valid = false; // initialize to not valid
+        String menuOption = null;
+        try {
+             while (!valid) { // loop while an invalid value is entered
+                this.console.println("\n" + this.menu);
             
-            menuOption = keyboard.nextLine(); // get next line typed on the keyboard
-            menuOption = menuOption.trim(); // trim off leading and trailing blanks
+                menuOption = this.keyboard.readLine(); // get next line typed on the keyboard
+                menuOption = menuOption.trim(); // trim off leading and trailing blanks
             
-            if (menuOption.length() < 1 ) { // value is blank
-                System.out.println("\nInvalid value: value can not be blank"
+                if (menuOption.length() < 1 ) { // value is blank
+                    this.console.println("\nInvalid value: value can not be blank"
                         + "\nThe Mad Math Genius stares anxiously at you.");
-              continue;
+                    continue;
+                }
+                break; // end the loop
             }
-            
-            break; // end the loop
-        }                                
+        } catch (Exception e) {
+            this.console.println("Error reading input:" + e.getMessage());
+        }    
         return menuOption; // return the value entered
     }
-
-    private boolean doAction(String menuOption) {
+    
+    @Override
+    public boolean doAction(String menuOption) {
         
         menuOption = menuOption.toUpperCase();
         if (menuOption.equals("E"))

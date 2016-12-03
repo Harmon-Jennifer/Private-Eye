@@ -14,11 +14,14 @@ import privateeye.PrivateEye;
  */
 public class ErrorView {
     private static final PrintWriter errorFile = PrivateEye.getOutFile();
+    private static final PrintWriter logFile = PrivateEye.getLogFile();
     
     public static void display(String className, String errorMessage){
         errorFile.println(
                     "--------------------------------------------------------"
-                   +"\n- ERROR - "+errorMessage
+                   +"\n- ERROR - "+ errorMessage
                    +"\n--------------------------------------------------------");
+        // log error
+        logFile.println(className + " - " + errorMessage);
     }
 }
