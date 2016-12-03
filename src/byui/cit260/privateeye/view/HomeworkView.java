@@ -58,8 +58,9 @@ public class HomeworkView extends View {
             menuOption = menuOption.trim(); // trim off leading and trailing blanks
             
             if (menuOption.length() < 1 ) { // value is blank
-                this.console.println("\nInvalid value: value can not be blank"
-                        + "\nThe Dumb Kid waits for you to actually say something.");
+                ErrorView.display(this.getClass().getName(),
+                            "\nInvalid value: value can not be blank"
+                            + "\nThe Dumb Kid waits for you to actually say something.");
               continue;
             }
             
@@ -78,8 +79,9 @@ public class HomeworkView extends View {
         try {
         int menuCheck = Integer.parseInt(menuOption);
         } catch (NumberFormatException nf){
-            this.console.println("\nYou must enter a valid number. Try again or"
-                    + "press E to quit./n");
+            ErrorView.display(this.getClass().getName(),
+                        "\nYou must enter a valid number. Try again or"
+                        + "press E to quit./n");
         }
         int input = Integer.parseInt(menuOption);
         

@@ -50,21 +50,22 @@ public class EvidenceListView extends View {
                 this.deleteEvidence();
                 break;
             default:
-                System.out.println("\nInvalid option: Please select an option from the Evidence Menu.");
+                ErrorView.display(this.getClass().getName(),
+                        "\nInvalid option: Please select an option from the Evidence Menu.");
                 break;
         }
         return false;
     }
 
     private void addEvidence() {
-        System.out.println("*** addEvidence function called ***");
+        this.console.println("*** addEvidence function called ***");
     }
     
     private void sortEvidence() {
-        System.out.println("Function called to Sort List");
+        this.console.println("Function called to Sort List");
         }
 
     private void deleteEvidence() {
-        System.out.println("*** deleteEvidence function called ***");
+        this.console.println("*** deleteEvidence function called ***");
     }
 }

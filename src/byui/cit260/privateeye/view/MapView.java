@@ -50,22 +50,23 @@ public class MapView extends View{
                 this.moveLocation();
                 break;        
             default:
-                System.out.println("\nInvalid option: Please select an option from the Map Menu.");
+                ErrorView.display(this.getClass().getName(),
+                        "\nInvalid option: Please select an option from the Map Menu.");
                 break;
         }
         return false;
     }
 //  List all the locations in the game.  
     protected void mapGetLocations() {
-        System.out.println("*** mapGetLocations function called ***");
+        this.console.println("*** mapGetLocations function called ***");
     }
 //  Shows only the locations that the user has visited.
     protected void mapGetVisited() {
-        System.out.println("*** mapGetVisited function called ***");
+        this.console.println("*** mapGetVisited function called ***");
     }
 //  Shows only the locations the user has not visited.
     protected void mapGetUnvisited() {
-        System.out.println("*** mapGetUnvisited function called ***");
+        this.console.println("*** mapGetUnvisited function called ***");
     }
     
 //  This allows the user to go directly from the map view to the move location view, instead of forcing them to exit out to the game menu and then to the move locations view.

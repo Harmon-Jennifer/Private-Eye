@@ -36,7 +36,8 @@ public class MoveLocationsView extends MapView {
                 this.mapGetUnvisited();
                 break;
             default:
-                System.out.println("\nInvalid option: Please select an option from the Move Locations Menu.");
+                ErrorView.display(this.getClass().getName(),
+                        "\nInvalid option: Please select an option from the Move Locations Menu.");
                 break;
         }
         return false;
@@ -44,12 +45,12 @@ public class MoveLocationsView extends MapView {
 //  Unlike the mapGetVisited() function in the MapView when this version of the function is called it will allow the user to select a location to move to.
     @Override
       protected void mapGetVisited() {
-        System.out.println("*** mapGetVisited function in the MoveLocations Class called ***");
+        this.console.println("*** mapGetVisited function in the MoveLocations Class called ***");
     }
 //  Unlike the mapGetUnvisited() function in the MapView when this version of the function is called it will allow the user to select a location to move to.
     @Override
     protected void mapGetUnvisited() {
-        System.out.println("*** mapGetUnvisited function in the MoveLocations Class called ***");
+        this.console.println("*** mapGetUnvisited function in the MoveLocations Class called ***");
     }
 
 }

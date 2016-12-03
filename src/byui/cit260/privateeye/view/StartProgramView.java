@@ -28,7 +28,7 @@ public class StartProgramView extends View {
         }
 
     private void displayBanner() {
-        System.out.println(
+        this.console.println(
               "\n*****"
             + "\n*"
             + "\nThere's been a murder, and your friend's been wrongfully "
@@ -66,19 +66,21 @@ public class StartProgramView extends View {
         try {
             
             while (!valid) { // loop while an invalid value is entered
-            System.out.println("\n" + this.promptMessage);
+            this.console.println("\n" + this.promptMessage);
             
             value = this.keyboard.readLine(); // get next line typed on the keyboard
             value = value.trim(); // trim off leading and trailing blanks
             
             if (value.length() < 1) { // value is blank
-                System.out.println("\nInvalid value: value can not be blank");
+                ErrorView.display(this.getClass().getName(),
+                            "\nInvalid value: value can not be blank");
                 continue;
             }
             break; // end the loop
         } 
     } catch (Exception e) {
-         System.out.println("Error reading input: " + e.getMessage());
+         ErrorView.display(this.getClass().getName(),
+                        "Error reading input: " + e.getMessage());
         }
         
         return value; // return the value entered
@@ -88,7 +90,8 @@ public class StartProgramView extends View {
     public boolean doAction(String playersName) {
         
         if (playersName.length() < 2) {
-            System.out.println("\nInvalid players name: " + "The name must be greater than one character in length");
+            ErrorView.display(this.getClass().getName(),
+                    "\nInvalid players name: " + "The name must be greater than one character in length");
         return false;
     }
 
@@ -96,7 +99,8 @@ public class StartProgramView extends View {
     Player player = GameControl.createPlayer(playersName);
     
     if (player == null) { // if unsuccessful
-        System.out.println("\n/Error creating the player.");
+        ErrorView.display(this.getClass().getName(),
+                "\n/Error creating the player.");
         return false;
     }
     
@@ -108,7 +112,7 @@ public class StartProgramView extends View {
     private void displayNextView(Player player) {
         
         // display a custom welcome message
-        System.out.println("\n=============================================" 
+        this.console.println("\n=============================================" 
                           + "\n Welcome to the game " + player.getName() 
                           + "\n Now go find the killer and free your friend." 
                           + "\n============================================="

@@ -39,22 +39,23 @@ public class InventoryListView extends View {
                 this.inventoryID();
                 break;
             default:
-                System.out.println("\nInvalid option: Please select an option from the Inventory list.");
+                ErrorView.display(this.getClass().getName(),
+                        "\nInvalid option: Please select an option from the Inventory list.");
                 break;
         }
         return false;
     }
    
     private void inventoryNotePad() {
-        System.out.println("*** inventoryNotePad information function called ***");
+        this.console.println("*** inventoryNotePad information function called ***");
     }
 
     private void inventoryPencil() {
-        System.out.println("*** inventoryPencil information function called ***");
+        this.console.println("*** inventoryPencil information function called ***");
     }
 
     private void inventoryID() {
-        System.out.println("*** inventoryID information function called ***");
+        this.console.println("*** inventoryID information function called ***");
     }
    
 }

@@ -140,17 +140,17 @@ public class PrivateEye {
         String mapInfo = testMap.toString();
         String playerInfo = testPlayer.toString();
         
-        System.out.println(droneInfo);
-        System.out.println(itemInfo);
-        System.out.println(locationInfo);
-        System.out.println(mapInfo);
-        System.out.println(playerInfo);
+        this.console.println(droneInfo);
+        this.console.println(itemInfo);
+        this.console.println(locationInfo);
+        this.console.println(mapInfo);
+        this.console.println(playerInfo);
         */
         //Mark here. Hope this effing works finally
         
         
 /*        
-        System.out.println("Please enter your name, Detective:");
+        this.console.println("Please enter your name, Detective:");
 		
 		Scanner inFile;
 		inFile = new Scanner(System.in);        
@@ -158,34 +158,34 @@ public class PrivateEye {
         
 Opening dialog. - Setting the scene - The squenced execution makes it seem more interactive.
 *     
-        System.out.println("\nIt was a quiet night - a little too quiet - when the door to my office creeked open. Even though my back was turned I knew who this dame was from the unmistakable scent of her White Diamonds perfume.\n");
+        this.console.println("\nIt was a quiet night - a little too quiet - when the door to my office creeked open. Even though my back was turned I knew who this dame was from the unmistakable scent of her White Diamonds perfume.\n");
         try{ Thread.sleep(7000); }catch( Exception e ){}
-        System.out.println("\n"+name+": \"I thought I told you I never wanted to to see you again.\"\n");
+        this.console.println("\n"+name+": \"I thought I told you I never wanted to to see you again.\"\n");
         try{ Thread.sleep(3500); }catch( Exception e ){}
-        System.out.println("\nTrixie: \"I wouldn't be here, but Donny has been arrested.\"\n");
+        this.console.println("\nTrixie: \"I wouldn't be here, but Donny has been arrested.\"\n");
         try{ Thread.sleep(3000); }catch( Exception e ){}
-        System.out.println("\nI grinned.\n");
+        this.console.println("\nI grinned.\n");
         try{ Thread.sleep(1000); }catch( Exception e ){}
-        System.out.println("\n"+name+": \"I can't say that surpirses me; it's been a long time comin' dollface. You know that?\"\n");
+        this.console.println("\n"+name+": \"I can't say that surpirses me; it's been a long time comin' dollface. You know that?\"\n");
         try{ Thread.sleep(4500); }catch( Exception e ){}
-        System.out.println("\nTrixie: \"The Feds say he murdered that man last night!! Donny's no saint, but we both know he's no murderer!\"\n");
+        this.console.println("\nTrixie: \"The Feds say he murdered that man last night!! Donny's no saint, but we both know he's no murderer!\"\n");
         try{ Thread.sleep(4500); }catch( Exception e ){}
-        System.out.println("\n"+name+": \"Speak for yourself.\"\n");
+        this.console.println("\n"+name+": \"Speak for yourself.\"\n");
         try{ Thread.sleep(1000); }catch( Exception e ){}
-        System.out.println("\nTrixie: \"You shut your mouth! You and Donny used to be best friends; what happened between you two?\"\n");
+        this.console.println("\nTrixie: \"You shut your mouth! You and Donny used to be best friends; what happened between you two?\"\n");
         try{ Thread.sleep(4500); }catch( Exception e ){}
-        System.out.println("\n"+name+": \"He stole my girl thats what happenned!\"\n");
+        this.console.println("\n"+name+": \"He stole my girl thats what happenned!\"\n");
         try{ Thread.sleep(2000); }catch( Exception e ){}
-        System.out.println("\nTrixie: \"Donny didn't steal me; you pushed me away! We never meant for it to happen, but he's my soulmate "+name+", and if you ever loved me, please help me now. You're my only hope.\"\n");
+        this.console.println("\nTrixie: \"Donny didn't steal me; you pushed me away! We never meant for it to happen, but he's my soulmate "+name+", and if you ever loved me, please help me now. You're my only hope.\"\n");
         try{ Thread.sleep(6000); }catch( Exception e ){}
-        System.out.println("\nI could hear her sobbing as I stared out my office window; I always had a weakness for damsels in distress, especially one like Trixie Trueheart.\n");
+        this.console.println("\nI could hear her sobbing as I stared out my office window; I always had a weakness for damsels in distress, especially one like Trixie Trueheart.\n");
         try{ Thread.sleep(6000); }catch( Exception e ){}
-        System.out.print("\n"+name+": \"Fine");
+        this.console.print("\n"+name+": \"Fine");
         try{ Thread.sleep(1500); }catch( Exception e ){}
-        System.out.print("... ");
+        this.console.print("... ");
         try{ Thread.sleep(1500); }catch( Exception e ){}
-        System.out.print("I'll take the case.\"\n");
+        this.console.print("I'll take the case.\"\n");
         try{ Thread.sleep(1000); }catch( Exception e ){}
-        System.out.println("\nTrixie: \"Thank you, thank you "+name+", I knew I count on you.\"\n");
+        this.console.println("\nTrixie: \"Thank you, thank you "+name+", I knew I count on you.\"\n");
    */ }
 }

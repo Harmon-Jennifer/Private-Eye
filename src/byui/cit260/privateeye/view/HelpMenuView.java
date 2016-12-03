@@ -42,25 +42,26 @@ public class HelpMenuView extends View{
                 this.helpAccuse();
                 break;
             default:
-                System.out.println("\nInvalid option: Please select an option from the Help Menu.");
+                ErrorView.display(this.getClass().getName(),
+                        "\nInvalid option: Please select an option from the Help Menu.");
                 break;
         }
         return false;
     }
    
     private void helpGameGoal() {
-        System.out.println("*** helpGameGoal function called ***");
+        this.console.println("*** helpGameGoal function called ***");
     }
 
     private void helpMove() {
-        System.out.println("*** helpMove function called ***");
+        this.console.println("*** helpMove function called ***");
     }
 
     private void helpInteract() {
-        System.out.println("*** helpInteract function called ***");
+        this.console.println("*** helpInteract function called ***");
     }
 
     private void helpAccuse() {
-        System.out.println("*** helpAccuse function called ***");
+        this.console.println("*** helpAccuse function called ***");
     }    
 }

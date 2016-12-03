@@ -38,14 +38,15 @@ public class LoseGameView extends View{
                 this.goToMainMenu();
                 break;
             default:
-                   System.out.println("Invalid input. Select an option from the menu.");
+                   ErrorView.display(this.getClass().getName(),
+                           "Invalid input. Select an option from the menu.");
                    break;
        }
         return false;
     }
     
     protected void goToLoadGame(){
-        System.out.println("**goToLoadGame() called");
+        this.console.println("**goToLoadGame() called");
 }
     protected void goToMainMenu(){
         MainMenuView mainMenuView = new MainMenuView();

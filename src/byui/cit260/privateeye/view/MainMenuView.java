@@ -49,7 +49,8 @@ public class MainMenuView extends View {
                 this.percTest();
                 break;
             default:
-                System.out.println("\nInvalid option: Please select an option from the Main Menu.");
+                ErrorView.display(this.getClass().getName(),
+                        "\nInvalid option: Please select an option from the Main Menu.");
                 break;
         }
         return false;
@@ -63,11 +64,11 @@ public class MainMenuView extends View {
     }
     
     private void saveGame() {
-       System.out.println("*** saveGame function called ***");
+       this.console.println("*** saveGame function called ***");
     }
     
     private void loadSavedGame() {
-       System.out.println("*** loadSavedGame function called ***");
+       this.console.println("*** loadSavedGame function called ***");
     }
     
     private void helpMenu() {
@@ -79,7 +80,7 @@ public class MainMenuView extends View {
         TrialControl trial = new TrialControl();
         int[] testData = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         int testAnswer = trial.getPercentage(testData);
-        System.out.println("\nThe percentage total is " + testAnswer + "\n\n");
+        this.console.println("\nThe percentage total is " + testAnswer + "\n\n");
     }
     
     

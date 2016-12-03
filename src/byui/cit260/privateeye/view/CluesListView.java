@@ -36,14 +36,15 @@ public class CluesListView extends View {
                 this.cluesGetDescription();
                 break;
             default:
-                System.out.println("\nInvalid option: Please select an option from the Clues Menu.");
+                ErrorView.display(this.getClass().getName(),
+                        "\nInvalid option: Please select an option from the Clues Menu.");
                 break;
         }
         return false;
     }
    
     private void cluesGetDescription() {
-        System.out.println("*** cluesGetDescription function called ***");
+        this.console.println("*** cluesGetDescription function called ***");
     }
     
 }

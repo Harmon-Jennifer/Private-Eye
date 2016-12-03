@@ -59,14 +59,16 @@ public class BunnyView extends View {
                 menuOption = menuOption.trim(); // trim off leading and trailing blanks
             
                 if (menuOption.length() < 1 ) { // value is blank
-                    this.console.println("\nInvalid value: value can not be blank"
-                        + "\nThe Mad Math Genius stares anxiously at you.");
+                    ErrorView.display(this.getClass().getName(),
+                                      "\nInvalid value: value can not be blank"
+                                    + "\nThe Mad Math Genius stares anxiously at you.");
                     continue;
                 }
                 break; // end the loop
             }
         } catch (Exception e) {
-            this.console.println("Error reading input:" + e.getMessage());
+            ErrorView.display(this.getClass().getName(),
+                              "Error reading input:" + e.getMessage());
         }    
         return menuOption; // return the value entered
     }
@@ -81,13 +83,13 @@ public class BunnyView extends View {
         double input = Double.parseDouble(menuOption);
         
         if (input == 50){
-            System.out.println("The answer is correct."
+            this.console.println("The answer is correct."
                     + "\nThe Mad Math Genius looks pleased."
                     + " He hands you a new clue.");
             return true; //ends view and returns to previous menu
         }
         else{
-            System.out.println("The answer is incorrect. "
+            this.console.println("The answer is incorrect. "
                     + "\nThe Mad Math Genius flies into a rage."
                     + " He kills you. Was he the killer? Who knows."
                     + "\n **** GAME OVER ****"

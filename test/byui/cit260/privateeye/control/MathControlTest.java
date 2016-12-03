@@ -5,6 +5,9 @@
  */
 package byui.cit260.privateeye.control;
 
+import byui.cit260.privateeye.exceptions.MathControlException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -27,7 +30,12 @@ public class MathControlTest {
         int blackBunny = 5;
         MathControl instance = new MathControl();
         double expResult = 0.56;
-        double result = instance.answerBunny(brownBunny, blackBunny);
+        double result = 0;
+        try {
+            result = instance.answerBunny(brownBunny, blackBunny);
+        } catch (MathControlException ex) {
+            Logger.getLogger(MathControlTest.class.getName()).log(Level.SEVERE, null, ex);
+        }
         assertEquals(expResult, result, 0.0);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
@@ -37,7 +45,11 @@ public class MathControlTest {
         blackBunny = 5;
         
         expResult = -1.0;
-        result = instance.answerBunny(brownBunny, blackBunny);
+        try {
+            result = instance.answerBunny(brownBunny, blackBunny);
+        } catch (MathControlException ex) {
+            Logger.getLogger(MathControlTest.class.getName()).log(Level.SEVERE, null, ex);
+        }
         assertEquals(expResult, result, 0.0);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
@@ -47,7 +59,11 @@ public class MathControlTest {
         blackBunny = 0;
         
         expResult = -1.0;
-        result = instance.answerBunny(brownBunny, blackBunny);
+        try {
+            result = instance.answerBunny(brownBunny, blackBunny);
+        } catch (MathControlException ex) {
+            Logger.getLogger(MathControlTest.class.getName()).log(Level.SEVERE, null, ex);
+        }
         assertEquals(expResult, result, 0.0);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
@@ -57,7 +73,11 @@ public class MathControlTest {
         blackBunny = 5;
         
         expResult = -1.0;
-        result = instance.answerBunny(brownBunny, blackBunny);
+        try {
+            result = instance.answerBunny(brownBunny, blackBunny);
+        } catch (MathControlException ex) {
+            Logger.getLogger(MathControlTest.class.getName()).log(Level.SEVERE, null, ex);
+        }
         assertEquals(expResult, result, 0.0);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
@@ -67,7 +87,11 @@ public class MathControlTest {
         blackBunny = 500;
         
         expResult = -1.0;
-        result = instance.answerBunny(brownBunny, blackBunny);
+        try {
+            result = instance.answerBunny(brownBunny, blackBunny);
+        } catch (MathControlException ex) {
+            Logger.getLogger(MathControlTest.class.getName()).log(Level.SEVERE, null, ex);
+        }
         assertEquals(expResult, result, 0.0);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
@@ -77,7 +101,11 @@ public class MathControlTest {
         blackBunny = 5;
         
         expResult = 1.0;
-        result = instance.answerBunny(brownBunny, blackBunny);
+        try {
+            result = instance.answerBunny(brownBunny, blackBunny);
+        } catch (MathControlException ex) {
+            Logger.getLogger(MathControlTest.class.getName()).log(Level.SEVERE, null, ex);
+        }
         assertEquals(expResult, result, 0.0);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
@@ -87,7 +115,11 @@ public class MathControlTest {
         blackBunny = 1;
         
         expResult = 0.2;
-        result = instance.answerBunny(brownBunny, blackBunny);
+        try {
+            result = instance.answerBunny(brownBunny, blackBunny);
+        } catch (MathControlException ex) {
+            Logger.getLogger(MathControlTest.class.getName()).log(Level.SEVERE, null, ex);
+        }
         assertEquals(expResult, result, 0.0);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
@@ -97,7 +129,11 @@ public class MathControlTest {
         blackBunny = 5;
         
         expResult = 0.36;
-        result = instance.answerBunny(brownBunny, blackBunny);
+        try {
+            result = instance.answerBunny(brownBunny, blackBunny);
+        } catch (MathControlException ex) {
+            Logger.getLogger(MathControlTest.class.getName()).log(Level.SEVERE, null, ex);
+        }
         assertEquals(expResult, result, 0.0);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
@@ -107,7 +143,11 @@ public class MathControlTest {
         blackBunny = 10;
         
         expResult = 0.71;
-        result = instance.answerBunny(brownBunny, blackBunny);
+        try {
+            result = instance.answerBunny(brownBunny, blackBunny);
+        } catch (MathControlException ex) {
+            Logger.getLogger(MathControlTest.class.getName()).log(Level.SEVERE, null, ex);
+        }
         assertEquals(expResult, result, 0.0);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");

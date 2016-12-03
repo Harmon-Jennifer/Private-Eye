@@ -58,7 +58,8 @@ public class GameMenuView extends View {
                 this.talkToPeople();
                 break;
             default:
-                System.out.println("\nInvalid option: Please select an option from the Game Menu.");
+                ErrorView.display(this.getClass().getName(),
+                        "\nInvalid option: Please select an option from the Game Menu.");
                 break;
         }
         return false;
@@ -82,22 +83,22 @@ public class GameMenuView extends View {
     private void mapView() {
         Map map = PrivateEye.getCurrentGame().getMap();
         int visited = map.sumMapVisited(map); 
-        System.out.println("\n\n*---------------*");
-        System.out.println("| Visited: "+visited+"/25 |");
-        System.out.println("|---------------|");
-        System.out.println("|   | 1 2 3 4 5 |");
-        System.out.println("|---------------|");
+        this.console.println("\n\n*---------------*");
+        this.console.println("| Visited: "+visited+"/25 |");
+        this.console.println("|---------------|");
+        this.console.println("|   | 1 2 3 4 5 |");
+        this.console.println("|---------------|");
         int i = 1;
         for(int row = 0; row < Map.NUMROWS; row++){            
-            System.out.print("| "+i+" | ");
+            this.console.print("| "+i+" | ");
             i++;
             for(int col = 0; col < Map.NUMCOLUMNS; col++){
                 char localeType = map.getLocaleAt(row, col).getLocaleType().toString().charAt(0);
-                System.out.print(localeType + " ");
+                this.console.print(localeType + " ");
             }
-            System.out.println("|");
+            this.console.println("|");
         }
-        System.out.println("*---------------*");
+        this.console.println("*---------------*");
     }
 
     protected void moveLocation() {
@@ -106,7 +107,7 @@ public class GameMenuView extends View {
     }
 
     private void exploreLocation() {
-        System.out.println("*** exploreLocation function called ***");
+        this.console.println("*** exploreLocation function called ***");
     }
 
     private void talkToPeople() {
