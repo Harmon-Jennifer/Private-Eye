@@ -7,7 +7,8 @@ package byui.cit260.privateeye.view;
 
 import byui.cit260.privateeye.model.Map;
 import privateeye.PrivateEye;
-
+import byui.cit260.privateeye.view.MapView;
+import java.io.PrintWriter;
 /**
  *
  * @author Konkles
@@ -56,6 +57,9 @@ public class GameMenuView extends View {
                 break;
             case "T":
                 this.talkToPeople();
+                break;
+            case "G":
+                this.getItemNames();
                 break;
             default:
                 ErrorView.display(this.getClass().getName(),
@@ -113,5 +117,24 @@ public class GameMenuView extends View {
     private void talkToPeople() {
         TalkView talkView = new TalkView();
         talkView.display();
+    }
+    
+    private void getItemNames() {
+        try {
+            String filePath = "mapReport.txt";
+            PrintWriter output = new PrintWriter(filePath);
+            
+            output.printf("Notepad\n");
+            output.printf("Pencil\n");
+            output.printf("Your ID\n");
+            output.printf("Bullet casing\n");
+            output.printf("Fingerprint\n");
+            output.printf("Bloody glove\n");
+            
+            output.flush();
+            
+        } catch (Exception e) {
+            ErrorView.display(this.getClass().getName(), e.getMessage());
+        }
     }
 }
