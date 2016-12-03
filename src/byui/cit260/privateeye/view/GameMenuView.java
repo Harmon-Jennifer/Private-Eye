@@ -121,7 +121,7 @@ public class GameMenuView extends View {
     
     private void getItemNames() {
         try {
-            String filePath = "mapReport.txt";
+            String filePath = "itemReport.txt";
             PrintWriter output = new PrintWriter(filePath);
             
             output.printf("Notepad\n");
