@@ -27,6 +27,7 @@ public class GameMenuView extends View {
               + "\nL - Move locations"
               + "\nX - Explore location"
               + "\nT - Talk to people"
+              + "\nG - Print Item List" 
               + "\nQ - Exit Game Menu"
               + "\n----------------------------------------------");
     }
