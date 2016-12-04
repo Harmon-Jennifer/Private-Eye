@@ -5,7 +5,12 @@
  */
 package byui.cit260.privateeye.control;
 
+import byui.cit260.privateeye.exceptions.GameControlException;
 import byui.cit260.privateeye.model.*;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import privateeye.PrivateEye;
 
 /**
@@ -51,4 +56,27 @@ public class GameControl {
         return player;
     }
 
+    public static void saveGame(Game game, String filepath) throws GameControlException {
+        try(FileOutputStream fops = new FileOutputStream(filepath)) {
+            ObjectOutputStream output = new ObjectOutputStream(fops);
+            output.writeObject(game); //write the game object out to file
+        }
+        catch(Exception e) {
+            throw new GameControlException(e.getMessage());
+        }
+    }
+    
+    public static void loadGame(String filepath) throws GameControlException {
+        Game game = null;
+        try(FileInputStream fips = new FileInputStream(filepath)){
+            ObjectInputStream input = new ObjectInputStream(fips);
+            
+            game = (Game) input.readObject();
+        }
+        catch(Exception e){
+            throw new GameControlException(e.getMessage());
+        }
+        
+        PrivateEye.setCurrentGame(game);
+    }
 }

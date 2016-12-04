@@ -35,6 +35,9 @@ public class MoveLocationsView extends MapView {
             case "N":
                 this.mapGetUnvisited();
                 break;
+            case "Q":
+                this.exitMoveMenu();
+                break;
             default:
                 ErrorView.display(this.getClass().getName(),
                         "\nInvalid option: Please select an option from the Move Locations Menu.");
@@ -52,5 +55,8 @@ public class MoveLocationsView extends MapView {
     protected void mapGetUnvisited() {
         this.console.println("*** mapGetUnvisited function in the MoveLocations Class called ***");
     }
-
+    
+    protected void exitMoveMenu(){
+        
+    }
 }
