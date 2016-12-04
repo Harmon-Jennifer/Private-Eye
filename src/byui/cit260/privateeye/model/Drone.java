@@ -19,26 +19,29 @@ public enum Drone implements Serializable{
     HomeworkKid("Absolutely hopeless"),
     Suspect("There's gonna be several of these");
     
-    private final String droneType;
+    //private final String droneType;
     private final String droneDesc;
 
     Drone(String description){
     this.droneDesc = description;
-    droneType = new String("droneType");
+    //droneType = new String("droneType");
 }
-    public String getDroneType() {
+    /*public String getDroneType() {
         return droneType;
-    }
+    }*/
 
     public String getDroneDesc() {
         return droneDesc;
     }
 
-    @Override
+    /*@Override
     public String toString() {
         return "Drone{" + "droneName=" + this + ", droneType=" + droneType + ", droneDesc=" + droneDesc + '}';
+    }*/
+    @Override
+    public String toString() {
+        return "Drone{" + "droneName=" + this + ", droneType=" + ", droneDesc=" + droneDesc + '}';
     }
-    
     
     
 }

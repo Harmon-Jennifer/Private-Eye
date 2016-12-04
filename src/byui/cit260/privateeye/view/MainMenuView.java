@@ -5,7 +5,8 @@
  */
 package byui.cit260.privateeye.view;
 import byui.cit260.privateeye.control.GameControl;
-import byui.cit260.privateeye.control.TrialControl;
+import byui.cit260.privateeye.model.Drone;
+import java.io.PrintWriter;
 import privateeye.PrivateEye;
 
 /**
@@ -46,7 +47,7 @@ public class MainMenuView extends View {
                 this.helpMenu();
                 break;
             case "Z":
-                this.percTest();
+                this.markTest();
                 break;
             default:
                 ErrorView.display(this.getClass().getName(),
@@ -95,13 +96,22 @@ public class MainMenuView extends View {
        helpMenuView.display();
     }
     
-    private void percTest() {
-        TrialControl trial = new TrialControl();
-        int[] testData = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        int testAnswer = trial.getPercentage(testData);
-        this.console.println("\nThe percentage total is " + testAnswer + "\n\n");
+    private void markTest() {
+        try {
+            String filePath = "droneReport.txt";
+            PrintWriter output = new PrintWriter(filePath);
+            Drone [] droneList = Drone.values();
+            output.println("Drone Report\n\n");
+           for (Drone drone : droneList)
+            {
+                output.println(drone.name()+ ":     \t" + drone.getDroneDesc());
+            }
+            
+            output.flush();
+        } catch (Exception e){
+            ErrorView.display(this.getClass().getName(), e.getMessage());
+        }
     }
-    
     
     
 }
