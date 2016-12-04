@@ -5,6 +5,10 @@
  */
 package byui.cit260.privateeye.view;
 
+import byui.cit260.privateeye.model.Map;
+import java.io.PrintWriter;
+import privateeye.PrivateEye;
+
 /**
  *
  * @author Konkles
@@ -26,7 +30,7 @@ public class MapView extends View{
               + "\nL - List of possible all locations"
               + "\nV - List of previously visited locations"
               + "\nU - List of unvisited locations"
-              + "\nM - Move Locations Menu"
+              + "\nM - Move Locations Menu"             
               + "\nQ - Exit Map Menu" 
               + "\n----------------------------------------------");   
     }
@@ -48,7 +52,7 @@ public class MapView extends View{
                 break;
             case "M":
                 this.moveLocation();
-                break;        
+                break;  
             default:
                 ErrorView.display(this.getClass().getName(),
                         "\nInvalid option: Please select an option from the Map Menu.");
@@ -74,5 +78,4 @@ public class MapView extends View{
         MoveLocationsView moveLocationsView = new MoveLocationsView();
         moveLocationsView.display();
     }
-
 }

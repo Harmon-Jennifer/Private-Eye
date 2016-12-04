@@ -1,2 +1,2 @@
-byui.cit260.privateeye.view.MainMenuView - 
-Invalid option: Please select an option from the Main Menu.
+byui.cit260.privateeye.view.GameMenuView - Error reading input: null
+byui.cit260.privateeye.view.StartProgramView - Error reading input: null

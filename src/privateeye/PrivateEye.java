@@ -94,7 +94,7 @@ public class PrivateEye {
                     PrivateEye.outFile.close();
                 if (PrivateEye.logFile != null)
                     PrivateEye.logFile.close();
-            } catch (IOException e) {
+            } catch (Exception e) {
                 System.out.println("Error closing files");
                 return;
             }    
