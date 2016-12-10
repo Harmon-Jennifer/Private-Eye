@@ -9,13 +9,13 @@ package byui.cit260.privateeye.view;
  *
  * @author Jennifer
  */
-public class WinGameView extends View{
-    
-    public WinGameView(String message){
+public class WinGameView extends View {
+
+    public WinGameView(String message) {
         this.displayMessage = message;
     }
-    
-    public WinGameView(){
+
+    public WinGameView() {
         super("\n"
                 + "You did it!"
                 + "\nYou have discovered the killer, put him behind bars,"
@@ -25,13 +25,13 @@ public class WinGameView extends View{
                 + "\n\n-----------"
                 + "\n\nL) Load Game"
                 + "\nQ) Quit to Main Menu");
-        
+
     }
-    
+
     @Override
-    public boolean doAction(String value){
+    public boolean doAction(String value) {
         value = value.toUpperCase();
-        
+
         switch (value) {
             case "L":
                 this.goToLoadGame();
@@ -40,19 +40,20 @@ public class WinGameView extends View{
                 this.goToMainMenu();
                 break;
             default:
-                   ErrorView.display(this.getClass().getName(),
-                           "Invalid input. Select an option from the menu.");
-                   break;
-       }
+                ErrorView.display(this.getClass().getName(),
+                        "Invalid input. Select an option from the menu.");
+                break;
+        }
         return false;
     }
-    
-    protected void goToLoadGame(){
+
+    protected void goToLoadGame() {
         this.console.println("**goToLoadGame() called");
-}
-    protected void goToMainMenu(){
+    }
+
+    protected void goToMainMenu() {
         MainMenuView mainMenuView = new MainMenuView();
         mainMenuView.display();
     }
-   
+
 }

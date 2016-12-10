@@ -13,51 +13,51 @@ import java.util.Random;
  *
  * @author Mark
  */
-public class Map implements Serializable{
+public class Map implements Serializable {
 
     public static final int NUMROWS = 5;
     public static final int NUMCOLUMNS = 5;
     private String mapName;
     private int localeList;
-    private final Location [][] matrix = new Location [NUMROWS][NUMCOLUMNS];
-    
+    private final Location[][] matrix = new Location[NUMROWS][NUMCOLUMNS];
+
     public Map() {
     }
 
-    public void init(){
-        Random rand = new Random();        
-        for(int row = 0; row < NUMROWS; row++){
-            for(int col = 0; col < NUMCOLUMNS; col++){
+    public void init() {
+        Random rand = new Random();
+        for (int row = 0; row < NUMROWS; row++) {
+            for (int col = 0; col < NUMCOLUMNS; col++) {
                 Location locale = new Location();
                 locale.setLocaleColumn(col);
                 locale.setLocaleRow(row);
-                locale.setLocaleVisited(false);               
+                locale.setLocaleVisited(false);
                 int randLocale = rand.nextInt(LocaleType.values().length);
                 locale.setLocaleType(LocaleType.values()[randLocale]);
                 matrix[row][col] = locale;
             }
         }
     }
-    
+
     public int sumMapVisited(Map map) {
-        
+
         int i = 0;
-        for(int row = 0; row < Map.NUMROWS; row++){
-            for(int col = 0; col < Map.NUMCOLUMNS; col++){
+        for (int row = 0; row < Map.NUMROWS; row++) {
+            for (int col = 0; col < Map.NUMCOLUMNS; col++) {
                 boolean visited = map.getLocaleAt(row, col).getLocaleVisited();
-                if(visited == true){
+                if (visited == true) {
                     i++;
                 }
             }
         }
-        
+
         return i;
     }
-    
-    public Location getLocaleAt(int row, int col){
+
+    public Location getLocaleAt(int row, int col) {
         return matrix[row][col];
     }
-    
+
     public String getMapName() {
         return mapName;
     }
@@ -73,7 +73,7 @@ public class Map implements Serializable{
     public void setLocaleList(int localeList) {
         this.localeList = localeList;
     }
-    
+
     @Override
     public int hashCode() {
         int hash = 7;
@@ -115,8 +115,5 @@ public class Map implements Serializable{
     public String toString() {
         return "Map{" + "NUMROWS=" + NUMROWS + ", NUMCOLUMNS=" + NUMCOLUMNS + ", mapName=" + mapName + ", localeList=" + localeList + '}';
     }
-    
-    
-    
-    
+
 }

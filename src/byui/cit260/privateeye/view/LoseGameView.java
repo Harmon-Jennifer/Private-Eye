@@ -9,13 +9,13 @@ package byui.cit260.privateeye.view;
  *
  * @author Mark
  */
-public class LoseGameView extends View{
-    
-    public LoseGameView(String message){
+public class LoseGameView extends View {
+
+    public LoseGameView(String message) {
         this.displayMessage = message;
     }
-    
-    public LoseGameView(){
+
+    public LoseGameView() {
         super("\n"
                 + "You have failed to apprehend the murderer,"
                 + "\nand now your friend will rot in jail."
@@ -23,13 +23,13 @@ public class LoseGameView extends View{
                 + "\n\n-----------"
                 + "\n\nL) Load game"
                 + "\nM) Main Menu");
-        
+
     }
-    
+
     @Override
-    public boolean doAction(String value){
+    public boolean doAction(String value) {
         value = value.toUpperCase();
-        
+
         switch (value) {
             case "L":
                 this.goToLoadGame();
@@ -38,19 +38,20 @@ public class LoseGameView extends View{
                 this.goToMainMenu();
                 break;
             default:
-                   ErrorView.display(this.getClass().getName(),
-                           "Invalid input. Select an option from the menu.");
-                   break;
-       }
+                ErrorView.display(this.getClass().getName(),
+                        "Invalid input. Select an option from the menu.");
+                break;
+        }
         return false;
     }
-    
-    protected void goToLoadGame(){
+
+    protected void goToLoadGame() {
         this.console.println("**goToLoadGame() called");
-}
-    protected void goToMainMenu(){
+    }
+
+    protected void goToMainMenu() {
         MainMenuView mainMenuView = new MainMenuView();
         mainMenuView.display();
     }
-   
+
 }

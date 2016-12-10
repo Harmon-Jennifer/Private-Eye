@@ -16,10 +16,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.util.Scanner; 
+import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
 
 public class PrivateEye {
 
@@ -28,7 +27,7 @@ public class PrivateEye {
     private static PrintWriter outFile = null;
     private static BufferedReader inFile = null;
     private static PrintWriter logFile = null;
-    
+
     public static Game getCurrentGame() {
         return currentGame;
     }
@@ -44,7 +43,7 @@ public class PrivateEye {
     public static void setPlayer(Player player) {
         PrivateEye.player = player;
     }
-    
+
     public static PrintWriter getOutFile() {
         return outFile;
     }
@@ -60,7 +59,7 @@ public class PrivateEye {
     public static void setInFile(BufferedReader inFile) {
         PrivateEye.inFile = inFile;
     }
-    
+
     public static PrintWriter getLogFile() {
         return logFile;
     }
@@ -68,38 +67,40 @@ public class PrivateEye {
     public static void setLogFile(PrintWriter logFile) {
         PrivateEye.logFile = logFile;
     }
-    
-    public static void main(String[] args)  throws IOException {
-       
+
+    public static void main(String[] args) throws IOException {
+
         StartProgramView startProgramView = null;
-        try{
+        try {
             //open character stream files for end user input and output
             PrivateEye.inFile = new BufferedReader(new InputStreamReader(System.in));
-            PrivateEye.outFile = new PrintWriter(System.out, true);    
+            PrivateEye.outFile = new PrintWriter(System.out, true);
             //open log file for logging errors
             String filePath = "log.txt";
             PrivateEye.logFile = new PrintWriter(filePath);
-            
+
             startProgramView = new StartProgramView();
             startProgramView.displayStartProgramView();
         } catch (Exception e) {
             startProgramView.displayStartProgramView();
             //e.printStackTrace();
-        }
-        finally {
+        } finally {
             try {
-                if (PrivateEye.inFile != null)
+                if (PrivateEye.inFile != null) {
                     PrivateEye.inFile.close();
-                if (PrivateEye.outFile != null)
+                }
+                if (PrivateEye.outFile != null) {
                     PrivateEye.outFile.close();
-                if (PrivateEye.logFile != null)
+                }
+                if (PrivateEye.logFile != null) {
                     PrivateEye.logFile.close();
+                }
             } catch (Exception e) {
                 System.out.println("Error closing files");
                 return;
-            }    
+            }
         }
-        
+
         /*
         Drone testDrone = new Drone();
         
@@ -145,11 +146,9 @@ public class PrivateEye {
         this.console.println(locationInfo);
         this.console.println(mapInfo);
         this.console.println(playerInfo);
-        */
+         */
         //Mark here. Hope this effing works finally
-        
-        
-/*        
+        /*        
         this.console.println("Please enter your name, Detective:");
 		
 		Scanner inFile;
@@ -187,5 +186,5 @@ Opening dialog. - Setting the scene - The squenced execution makes it seem more 
         this.console.print("I'll take the case.\"\n");
         try{ Thread.sleep(1000); }catch( Exception e ){}
         this.console.println("\nTrixie: \"Thank you, thank you "+name+", I knew I count on you.\"\n");
-   */ }
+         */ }
 }

@@ -12,20 +12,21 @@ import java.util.Objects;
  *
  * @author Konkles
  */
-public enum Drone implements Serializable{
+public enum Drone implements Serializable {
 
     Murderer("This person that dunnit"),
     MathGenius("What's up with the bunnies?"),
     HomeworkKid("Absolutely hopeless"),
     Suspect("There's gonna be several of these");
-    
+
     //private final String droneType;
     private final String droneDesc;
 
-    Drone(String description){
-    this.droneDesc = description;
-    //droneType = new String("droneType");
-}
+    Drone(String description) {
+        this.droneDesc = description;
+        //droneType = new String("droneType");
+    }
+
     /*public String getDroneType() {
         return droneType;
     }*/
@@ -42,6 +43,5 @@ public enum Drone implements Serializable{
     public String toString() {
         return "Drone{" + "droneName=" + this + ", droneType=" + ", droneDesc=" + droneDesc + '}';
     }
-    
-    
+
 }

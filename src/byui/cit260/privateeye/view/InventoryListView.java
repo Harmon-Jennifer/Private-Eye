@@ -3,31 +3,31 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package byui.cit260.privateeye.view;
+
 /**
  *
  * @author Jennifer
  */
 public class InventoryListView extends View {
-    
+
     public InventoryListView() {
-        super("\n" 
-              + "\n----------------------------------------------"
-              + "\n| Inventory List                             |"
-              + "\n----------------------------------------------"
-              + "\nA - Notepad"
-              + "\nB - Pencil"
-              + "\nC - Your I.D."
-              + "\nQ - Exit Inventory list."
-              + "\n----------------------------------------------");
+        super("\n"
+                + "\n----------------------------------------------"
+                + "\n| Inventory List                             |"
+                + "\n----------------------------------------------"
+                + "\nA - Notepad"
+                + "\nB - Pencil"
+                + "\nC - Your I.D."
+                + "\nQ - Exit Inventory list."
+                + "\n----------------------------------------------");
     }
 
     @Override
     public boolean doAction(String value) {
-        
+
         value = value.toUpperCase(); // converts to all upper case
-        
+
         switch (value) {
             case "A":
                 this.inventoryNotePad();
@@ -45,7 +45,7 @@ public class InventoryListView extends View {
         }
         return false;
     }
-   
+
     private void inventoryNotePad() {
         this.console.println("*** inventoryNotePad information function called ***");
     }
@@ -57,5 +57,5 @@ public class InventoryListView extends View {
     private void inventoryID() {
         this.console.println("*** inventoryID information function called ***");
     }
-   
+
 }

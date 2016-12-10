@@ -25,6 +25,5 @@ public class ListControlException extends Exception {
     public ListControlException(Throwable cause) {
         super(cause);
     }
-    
-    
+
 }

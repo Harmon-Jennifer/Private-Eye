@@ -4,19 +4,20 @@
  * and open the template in the editor.
  */
 package byui.cit260.privateeye.model;
+
 import java.io.Serializable;
 import java.util.Objects;
+
 /**
  *
  * @author Konkles
  */
-public class Item implements Serializable{
-    
+public class Item implements Serializable {
+
     private String itemName;
     private String itemType;
     private String itemDesc;
-    
-    
+
     public Item() {
     }
 
@@ -42,8 +43,8 @@ public class Item implements Serializable{
 
     public void setItemDesc(String itemDesc) {
         this.itemDesc = itemDesc;
-    } 
-    
+    }
+
     @Override
     public int hashCode() {
         int hash = 3;
@@ -52,12 +53,12 @@ public class Item implements Serializable{
         hash = 79 * hash + Objects.hashCode(this.itemDesc);
         return hash;
     }
-    
+
     @Override
     public String toString() {
         return "Item{" + "itemName=" + itemName + ", itemType=" + itemType + ", itemDesc=" + itemDesc + '}';
     }
-    
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -80,10 +81,7 @@ public class Item implements Serializable{
             return false;
         }
         return true;
-        
-        
-    }
 
-    
+    }
 
 }

@@ -13,14 +13,15 @@ import privateeye.PrivateEye;
  * @author Konkles
  */
 public class ErrorView {
+
     private static final PrintWriter errorFile = PrivateEye.getOutFile();
     private static final PrintWriter logFile = PrivateEye.getLogFile();
-    
-    public static void display(String className, String errorMessage){
+
+    public static void display(String className, String errorMessage) {
         errorFile.println(
-                    "--------------------------------------------------------"
-                   +"\n- ERROR - "+ errorMessage
-                   +"\n--------------------------------------------------------");
+                "--------------------------------------------------------"
+                + "\n- ERROR - " + errorMessage
+                + "\n--------------------------------------------------------");
         // log error
         logFile.println(className + " - " + errorMessage);
         logFile.flush();

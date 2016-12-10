@@ -10,13 +10,13 @@ package byui.cit260.privateeye.model;
  * @author Jennifer
  */
 public enum ItemType {
-        PAPER,
-        PEN,
-        BADGE,
-        GLOVE,
-        GUN,
-        FINGERPRINTS,
-        HAIR,
-        SHOEPRINTS,
-        PHOTOGRAPH;
-    }
+    PAPER,
+    PEN,
+    BADGE,
+    GLOVE,
+    GUN,
+    FINGERPRINTS,
+    HAIR,
+    SHOEPRINTS,
+    PHOTOGRAPH;
+}

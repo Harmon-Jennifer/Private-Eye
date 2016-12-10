@@ -4,8 +4,10 @@
  * and open the template in the editor.
  */
 package byui.cit260.privateeye.model;
+
 import java.io.Serializable;
 import java.util.Objects;
+import java.util.Arrays;
 
 /**
  *
@@ -19,7 +21,7 @@ public class Game implements Serializable {
 
     private Map map;
     private Player player;
-    
+
     public Map getMap() {
         return map;
     }
@@ -35,8 +37,7 @@ public class Game implements Serializable {
     public void setPlayer(Player player) {
         this.player = player;
     }
-    
-    
+
     public Item[] getInventoryList() {
         return inventoryList;
     }
@@ -60,5 +61,5 @@ public class Game implements Serializable {
     public void setEvidenceList(Item[] evidenceList) {
         this.evidenceList = evidenceList;
     }
-    
+
 }

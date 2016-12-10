@@ -9,7 +9,7 @@ package byui.cit260.privateeye.exceptions;
  *
  * @author Konkles
  */
-public class MathControlException extends Exception{
+public class MathControlException extends Exception {
 
     public MathControlException() {
     }
@@ -29,5 +29,5 @@ public class MathControlException extends Exception{
     public MathControlException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
     }
-    
+
 }

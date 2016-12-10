@@ -7,15 +7,15 @@ package byui.cit260.privateeye.model;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /**
  *
  * @author Jennifer
  */
-public class Location implements Serializable{
-    
-    
+public class Location implements Serializable {
+
     // class instance variables
     private int localeRow;
     private int localeColumn;
@@ -23,11 +23,12 @@ public class Location implements Serializable{
     private Drone droneList;
     private LocaleType localeType;
     private final String coordinates;
-    
+    private Item item;
+
     Location() {
         coordinates = ("Row" + localeRow + "Column" + localeColumn);
         ArrayList<Drone> droneList = new ArrayList<>();
-        
+
     }
 
     public Drone getDroneList() {
@@ -66,14 +67,18 @@ public class Location implements Serializable{
         this.localeVisited = localeVisited;
     }
 
-    
+    public Item getItem() {
+        return item;
+    }
+
+    public void setItem(Item item) {
+        this.item = item;
+    }
+
     @Override
     public String toString() {
-        String location = ("coordinates=" + coordinates + ", localeType=" + this +  ", droneList=" + droneList);
+        String location = ("coordinates=" + coordinates + ", localeType=" + this + ", droneList=" + droneList);
         return location;
     }
 
-
-    
 }
-

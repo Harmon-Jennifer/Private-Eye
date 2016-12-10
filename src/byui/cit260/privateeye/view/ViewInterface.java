@@ -10,9 +10,11 @@ package byui.cit260.privateeye.view;
  * @author Jennifer
  */
 public interface ViewInterface {
-    
+
     public void display();
+
     public String getInput();
+
     public boolean doAction(String value);
-    
+
 }

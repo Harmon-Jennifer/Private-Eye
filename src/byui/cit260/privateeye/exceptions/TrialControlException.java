@@ -9,7 +9,7 @@ package byui.cit260.privateeye.exceptions;
  *
  * @author Mark
  */
-public class TrialControlException extends Exception{
+public class TrialControlException extends Exception {
 
     public TrialControlException() {
     }
@@ -29,5 +29,5 @@ public class TrialControlException extends Exception{
     public TrialControlException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
     }
-    
+
 }

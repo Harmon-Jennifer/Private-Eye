@@ -14,5 +14,5 @@ public enum LocaleType {
     LIBRARY,
     ALLEY,
     DOCKS,
-    OFFICE    
+    OFFICE
 }

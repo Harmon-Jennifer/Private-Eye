@@ -1,2 +1,0 @@
-byui.cit260.privateeye.view.GameMenuView - Error reading input: null
-byui.cit260.privateeye.view.StartProgramView - Error reading input: null

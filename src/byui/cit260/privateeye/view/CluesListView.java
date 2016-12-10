@@ -7,30 +7,29 @@ package byui.cit260.privateeye.view;
 
 import java.util.Scanner;
 
-
 /**
  *
  * @author Mark
  */
 public class CluesListView extends View {
-    
+
     public CluesListView() {
-        super("\n" 
-              + "\n----------------------------------------------"
-              + "\n| Clues Menu                                 |"
-              + "\n     INSERT LIST OF NUMBERED CLUES"
-              + "\n----------------------------------------------"
-              + "\nD - Get description of the clue."
-              + "\nQ - Exit Clues List."
-              + "\n----------------------------------------------");
-    
+        super("\n"
+                + "\n----------------------------------------------"
+                + "\n| Clues Menu                                 |"
+                + "\n     INSERT LIST OF NUMBERED CLUES"
+                + "\n----------------------------------------------"
+                + "\nD - Get description of the clue."
+                + "\nQ - Exit Clues List."
+                + "\n----------------------------------------------");
+
     }
 
     @Override
     public boolean doAction(String value) {
-        
+
         value = value.toUpperCase();
-        
+
         switch (value) {
             case "D":
                 this.cluesGetDescription();
@@ -42,9 +41,9 @@ public class CluesListView extends View {
         }
         return false;
     }
-   
+
     private void cluesGetDescription() {
         this.console.println("*** cluesGetDescription function called ***");
     }
-    
+
 }

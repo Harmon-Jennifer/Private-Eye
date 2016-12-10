@@ -4,30 +4,31 @@
  * and open the template in the editor.
  */
 package byui.cit260.privateeye.view;
+
 /**
  *
  * @author Konkles
  */
-public class HelpMenuView extends View{
-    
+public class HelpMenuView extends View {
+
     public HelpMenuView() {
-        super("\n" 
-                  + "\n----------------------------------------------"
-                  + "\n| Help Menu                                  |"
-                  + "\n----------------------------------------------"
-                  + "\nG - What is the goal of the game?"
-                  + "\nM - How to move."
-                  + "\nI - How to interact with people and objects."
-                  + "\nA - How to accuse a suspect."
-                  + "\nQ - Exit Help menu."
-                  + "\n----------------------------------------------");
+        super("\n"
+                + "\n----------------------------------------------"
+                + "\n| Help Menu                                  |"
+                + "\n----------------------------------------------"
+                + "\nG - What is the goal of the game?"
+                + "\nM - How to move."
+                + "\nI - How to interact with people and objects."
+                + "\nA - How to accuse a suspect."
+                + "\nQ - Exit Help menu."
+                + "\n----------------------------------------------");
     }
 
     @Override
     public boolean doAction(String value) {
-        
+
         value = value.toUpperCase();
-        
+
         switch (value) {
             case "G":
                 this.helpGameGoal();
@@ -48,7 +49,7 @@ public class HelpMenuView extends View{
         }
         return false;
     }
-   
+
     private void helpGameGoal() {
         this.console.println("*** helpGameGoal function called ***");
     }
@@ -63,5 +64,5 @@ public class HelpMenuView extends View{
 
     private void helpAccuse() {
         this.console.println("*** helpAccuse function called ***");
-    }    
+    }
 }

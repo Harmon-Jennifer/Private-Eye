@@ -12,9 +12,10 @@ import byui.cit260.privateeye.model.Map;
  * @author User
  */
 public class MapControl {
+
     public static Map createMap() {
         // create the map
         Map map = new Map();
         return map;
-    }   
+    }
 }
